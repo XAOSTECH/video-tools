@@ -1,0 +1,15 @@
+[submodule "copt"]
+	path = copt
+	url = https://github.com/XAOSTECH/copt.git
+
+[submodule "NG-S4"]
+	path = NG-S4
+	url = https://github.com/XAOSTECH/NG-S4.git
+
+[submodule "op-cap"]
+	path = op-cap
+	url = https://github.com/XAOSTECH/op-cap.git
+
+[submodule "vidcom"]
+	path = vidcom
+	url = https://github.com/XAOSTECH/vidcom.git

@@ -1,0 +1,291 @@
+# MINIMAL: All dependencies, no personal config (git identity, GPG, host mounts)
+# This is a tracked reference file. Personal config (Dockerfile) is gitignored.
+#
+# Common base layer for all dev-control category images
+# Sourced by containerise.sh generate_category_dockerfile()
+#
+# Provides: core dev tools, locale, timezone, GitHub CLI, nvm/Node.js
+# Used by: --base builds (all categories), concatenated with category Dockerfiles
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2025-2026 xaoscience
+
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install core development tools and dependencies
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+    git \
+    build-essential \
+    sudo \
+    locales \
+    lsb-release \
+    curl \
+    wget \
+    ca-certificates \
+    gnupg \
+    libsecret-tools \
+    nano \
+    jq \
+    && sed -i '/en_GB.UTF-8/s/^# //g' /etc/locale.gen \
+    && locale-gen en_GB.UTF-8 \
+    && update-locale LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8 \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV LANG=en_GB.UTF-8 \
+    LC_ALL=en_GB.UTF-8 \
+    TZ=Europe/Brussels \
+    EDITOR=nano
+
+RUN ln -snf /usr/share/zoneinfo/Europe/Brussels /etc/localtime && echo Europe/Brussels > /etc/timezone
+
+# Install GitHub CLI
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list \
+    && apt-get update && apt-get install -y gh \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install nvm and Node.js system-wide (required for npx-dependent MCP servers like firecrawl)
+ENV NVM_DIR=/opt/nvm
+RUN mkdir -p /opt/nvm \
+    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash \
+    && bash -c 'source /opt/nvm/nvm.sh && nvm install 22 && nvm alias default 22' \
+    && chmod -R a+rx /opt/nvm
+
+# Set PATH for npx/npm to work in non-shell contexts (MCP servers, IDE integrations)
+ENV PATH=/opt/nvm/versions/node/v22.13.1/bin:${PATH}
+
+# ============================================================================
+# STREAMING: FFmpeg+NVENC, NGINX-RTMP, SRT, ONNX Runtime GPU, YOLOv8
+# ============================================================================
+#
+# Category-specific layer appended after common.Dockerfile
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2025-2026 xaoscience
+
+# Install CUDA Toolkit 13.1
+RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb -O /tmp/cuda-keyring.deb \
+    && dpkg -i /tmp/cuda-keyring.deb && rm /tmp/cuda-keyring.deb \
+    && apt-get update && apt-get install -y \
+        cuda-toolkit-13-1 cuda-nvcc-13-1 \
+        cuda-libraries-dev-13-1 cuda-cudart-dev-13-1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install CUDA 12.6 runtime libraries for ONNX Runtime 1.20.x compatibility
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        cuda-cudart-12-6 cuda-nvrtc-12-6 \
+        libcublas-12-6 libcufft-12-6 libcurand-12-6 \
+        libcusparse-12-6 libcusolver-12-6 \
+        libnvjitlink-12-6 libcudnn9-cuda-12 \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=/usr/local/cuda/bin:${PATH} \
+    LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:/usr/local/cuda/lib64:${LD_LIBRARY_PATH} \
+    CUDA_HOME=/usr/local/cuda
+
+# Install FFmpeg build dependencies
+RUN apt-get update && apt-get install -y \
+    nasm yasm pkg-config gpg dirmngr libmd0 cmake \
+    libx264-dev libx265-dev libvpx-dev \
+    libfdk-aac-dev libmp3lame-dev libopus-dev \
+    libass-dev libfreetype6-dev libvorbis-dev \
+    libwebp-dev libaom-dev libdav1d-dev \
+    librist-dev libssl-dev libzmq3-dev libsdl2-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Build SRT from source
+RUN git clone --depth 1 --branch v1.5.4 https://github.com/Haivision/srt.git /tmp/srt \
+    && cd /tmp/srt && cmake -B build -DCMAKE_INSTALL_PREFIX=/usr/local \
+    && cmake --build build -j$(nproc) && cmake --install build \
+    && rm -rf /tmp/srt && ldconfig
+
+# Install nv-codec-headers for NVENC/NVDEC
+RUN git clone --depth 1 https://github.com/FFmpeg/nv-codec-headers.git /tmp/nv-codec-headers \
+    && cd /tmp/nv-codec-headers && make install \
+    && rm -rf /tmp/nv-codec-headers
+
+# Build FFmpeg from master with NVENC/NVDEC
+RUN git clone --depth 1 https://git.ffmpeg.org/ffmpeg.git /tmp/ffmpeg \
+    && cd /tmp/ffmpeg && ./configure \
+        --prefix=/usr/local --enable-gpl --enable-nonfree \
+        --enable-cuvid --enable-nvenc --enable-nvdec \
+        --enable-libx264 --enable-libx265 --enable-libvpx \
+        --enable-libfdk-aac --enable-libmp3lame --enable-libopus \
+        --enable-libass --enable-libfreetype --enable-libwebp \
+        --enable-libaom --enable-libdav1d --enable-libsrt \
+        --enable-librist --enable-libzmq \
+    && make -j$(nproc) && make install \
+    && rm -rf /tmp/ffmpeg && ldconfig
+
+# Build NGINX with RTMP module
+RUN apt-get update && apt-get install -y libpcre3-dev libssl-dev zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && git clone --depth 1 https://github.com/arut/nginx-rtmp-module.git /tmp/nginx-rtmp \
+    && curl -fsSL https://nginx.org/keys/nginx_signing.key | gpg --import \
+    && curl -sLO https://nginx.org/download/nginx-1.27.3.tar.gz \
+    && tar -xzf nginx-1.27.3.tar.gz -C /tmp && rm nginx-1.27.3.tar.gz \
+    && cd /tmp/nginx-1.27.3 && ./configure \
+        --prefix=/usr/local/nginx \
+        --with-http_ssl_module --with-http_v2_module \
+        --with-http_realip_module --with-http_stub_status_module \
+        --with-stream --with-stream_ssl_module \
+        --add-module=/tmp/nginx-rtmp \
+    && make -j$(nproc) && make install \
+    && rm -rf /tmp/nginx-* \
+    && ln -sf /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
+
+# Install streaming utilities
+RUN apt-get update && apt-get install -y mediainfo && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y sox libsox-fmt-all && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y v4l-utils && rm -rf /var/lib/apt/lists/*
+
+# Install FFmpeg development headers
+RUN apt-get update && apt-get install -y \
+    libavformat-dev libavcodec-dev libavutil-dev libswscale-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install yt-dlp
+RUN YT_DLP_VERSION=$(curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest | jq -r '.tag_name') \
+    && curl -fsSL "https://github.com/yt-dlp/yt-dlp/releases/download/${YT_DLP_VERSION}/yt-dlp" -o /usr/local/bin/yt-dlp \
+    && chmod a+rx /usr/local/bin/yt-dlp
+
+# Install TensorRT
+RUN apt-get update && apt-get install -y \
+    libnvinfer-lean10 libnvinfer-vc-plugin10 \
+    libnvinfer-dispatch10 libnvinfer-headers-dev \
+    bc sqlite3 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install ONNX Runtime 1.20.1 GPU
+RUN ONNX_VERSION="1.20.1" \
+    && curl -fsSL "https://github.com/microsoft/onnxruntime/releases/download/v${ONNX_VERSION}/onnxruntime-linux-x64-gpu-${ONNX_VERSION}.tgz" -o /tmp/onnxruntime.tgz \
+    && tar -xzf /tmp/onnxruntime.tgz -C /opt \
+    && mv /opt/onnxruntime-linux-x64-gpu-${ONNX_VERSION} /opt/onnxruntime \
+    && ln -sf /opt/onnxruntime/include/* /usr/local/include/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime.so* /usr/local/lib/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_cuda.so /usr/local/lib/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_shared.so /usr/local/lib/ \
+    && ldconfig && rm -f /tmp/onnxruntime.tgz
+
+ENV ONNXRUNTIME_DIR=/opt/onnxruntime \
+    LD_LIBRARY_PATH=/opt/onnxruntime/lib:${LD_LIBRARY_PATH}
+
+# Export YOLOv8n to ONNX format
+RUN apt-get update && apt-get install -y --no-install-recommends python3-pip python3-venv \
+    && python3 -m venv /tmp/yolo-export \
+    && /tmp/yolo-export/bin/pip install ultralytics onnx onnxslim onnxruntime \
+    && cd /tmp/yolo-export \
+    && /tmp/yolo-export/bin/python -c "from ultralytics import YOLO; model = YOLO('yolov8n.pt'); model.export(format='onnx', imgsz=640, opset=17, simplify=True)" \
+    && mkdir -p /opt/models \
+    && mv /tmp/yolo-export/yolov8n.onnx /opt/models/yolov8n.onnx \
+    && chmod 644 /opt/models/yolov8n.* \
+    && rm -rf /tmp/yolo-export ~/.config/Ultralytics /tmp/Ultralytics \
+    && apt-get purge -y python3-pip python3-venv \
+    && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=/usr/local/nginx/sbin:$PATH
+
+# ============================================================================
+# Streaming: Create video and render groups for DRI/KMS device access
+# ============================================================================
+
+RUN groupadd -f -g 44 video && groupadd -f -g 109 render
+
+# ============================================================================
+# Streaming: Create video and render groups for DRI/KMS device access
+# ============================================================================
+
+RUN groupadd -f -g 44 video && groupadd -f -g 109 render
+
+# ============================================================================
+# Common footer: User setup, nvm, dev-control (appended to all categories)
+# ============================================================================
+#
+# Expects: CATEGORY variable set by build process
+# Creates: Generic category-named user for base image reusability
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2025-2026 xaoscience
+
+# Note: CATEGORY, CFG_GITHUB_USER, CFG_GITHUB_USER_EMAIL, CFG_GPG_KEY_ID
+# are replaced by containerise.sh during generation
+
+# Create user streaming with sudo privileges
+RUN if id ubuntu &>/dev/null; then \
+        groupmod -n streaming ubuntu && \
+        usermod -l streaming -d /home/streaming -m ubuntu; \
+    else \
+        useradd -m -s /bin/bash -u 1000 streaming; \
+    fi && \
+    usermod -aG sudo streaming && \
+    echo "streaming ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    mkdir -p /home/streaming/.config /home/streaming/.cache /home/streaming/.local/share && \
+    chown -R streaming:streaming /home/streaming && \
+    chmod 755 /home/streaming && \
+    rm -rf /root/.gnupg /home/streaming/.gnupg
+
+USER streaming
+WORKDIR /home/streaming
+
+RUN touch ~/.hushlogin ~/.bashrc
+
+# Configure nvm for user shell (installed system-wide in common layer)
+# Set GPG_TTY correctly for interactive shells (must be evaluated at runtime, not baked in).
+RUN echo 'export NVM_DIR="/opt/nvm"' >> ~/.bashrc && \
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc && \
+    echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
+
+# Install dev-control system-wide to /opt
+USER root
+RUN mkdir -p /opt/dev-control && \
+    wget -O- https://github.com/XAOSTECH/dev-control/archive/refs/tags/latest.tar.gz | tar -xz --strip-components=1 -C /opt/dev-control && \
+    chmod +x /opt/dev-control/scripts/*.sh /opt/dev-control/lib/*.sh /opt/dev-control/lib/git/*.sh 2>/dev/null || true && \
+    echo 'export PATH=/opt/dev-control/scripts:$PATH' >> /etc/profile.d/dev-control.sh && \
+    chmod 644 /etc/profile.d/dev-control.sh
+
+# Pre-create directories with proper permissions before VS Code init runs.
+# VS Code's container setup (pre-postCreateCommand) creates missing dirs as root,
+# which permanently breaks writability for the container user.
+# Pre-creating here with correct ownership prevents that race condition.
+# BUILD_DATE busts this layer's cache on each build so permissions are always applied fresh.
+ARG BUILD_DATE
+RUN mkdir -p \
+        /home/streaming/.vscode-server \
+        /home/streaming/.bash_backups \
+        /home/streaming/.gnupg \
+        /home/streaming/.ssh \
+        /home/streaming/.cache \
+        /home/streaming/.config \
+        /home/streaming/.devcontainer && \
+    chown -R streaming:streaming \
+        /home/streaming/.vscode-server \
+        /home/streaming/.bash_backups \
+        /home/streaming/.gnupg \
+        /home/streaming/.ssh \
+        /home/streaming/.cache \
+        /home/streaming/.config \
+        /home/streaming/.devcontainer && \
+    chmod 775 /home/streaming/.vscode-server && \
+    chmod 700 /home/streaming/.bash_backups && \
+    chmod 700 /home/streaming/.gnupg && \
+    chmod 700 /home/streaming/.ssh && \
+    chmod 755 /home/streaming/.cache && \
+    chmod 755 /home/streaming/.config && \
+    chmod 700 /home/streaming/.devcontainer
+
+# Metadata label for container discovery and category identification
+LABEL dev-control.category="streaming" \
+      dev-control.type="base-image" \
+      dev-control.source="https://github.com/xaostech/dev-control"
+
+USER streaming
+
+WORKDIR /workspaces
+
+
+# Add streaming to video and render groups for DRI/KMS access
+USER root
+RUN usermod -aG video,render streaming
+USER streaming
