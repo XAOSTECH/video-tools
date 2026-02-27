@@ -4,10 +4,10 @@
 # Common base layer for all dev-control category images
 # Sourced by containerise.sh generate_category_dockerfile()
 #
-# Provides: core dev tools, locale, timezone, GitHub CLI, nvm/Node.js
+# Provides: core dev tools, locale, timezone
 # Used by: --base builds (all categories), concatenated with category Dockerfiles
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-Licence-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2025-2026 xaoscience
 
 FROM ubuntu:latest
@@ -46,23 +46,13 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
     && apt-get update && apt-get install -y gh \
     && rm -rf /var/lib/apt/lists/*
 
-# Install nvm and Node.js system-wide (required for npx-dependent MCP servers like firecrawl)
-ENV NVM_DIR=/opt/nvm
-RUN mkdir -p /opt/nvm \
-    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash \
-    && bash -c 'source /opt/nvm/nvm.sh && nvm install 22 && nvm alias default 22' \
-    && chmod -R a+rx /opt/nvm
-
-# Set PATH for npx/npm to work in non-shell contexts (MCP servers, IDE integrations)
-ENV PATH=/opt/nvm/versions/node/v22.13.1/bin:${PATH}
-
 # ============================================================================
 # STREAMING: FFmpeg+NVENC, NGINX-RTMP, SRT, ONNX Runtime GPU, YOLOv8
 # ============================================================================
 #
 # Category-specific layer appended after common.Dockerfile
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-Licence-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2025-2026 xaoscience
 
 # Install CUDA Toolkit 13.1
@@ -200,13 +190,13 @@ RUN groupadd -f -g 44 video && groupadd -f -g 109 render
 RUN groupadd -f -g 44 video && groupadd -f -g 109 render
 
 # ============================================================================
-# Common footer: User setup, nvm, dev-control (appended to all categories)
+# Common footer: User setup, dev-control (appended to all categories)
 # ============================================================================
 #
 # Expects: CATEGORY variable set by build process
 # Creates: Generic category-named user for base image reusability
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-Licence-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2025-2026 xaoscience
 
 # Note: CATEGORY, CFG_GITHUB_USER, CFG_GITHUB_USER_EMAIL, CFG_GPG_KEY_ID
@@ -244,6 +234,19 @@ RUN mkdir -p /opt/dev-control && \
     chmod +x /opt/dev-control/scripts/*.sh /opt/dev-control/lib/*.sh /opt/dev-control/lib/git/*.sh 2>/dev/null || true && \
     echo 'export PATH=/opt/dev-control/scripts:$PATH' >> /etc/profile.d/dev-control.sh && \
     chmod 644 /etc/profile.d/dev-control.sh
+
+# Install nvm and Node.js system-wide (required for npx-dependent MCP servers like firecrawl)
+ENV NVM_DIR=/opt/nvm
+RUN mkdir -p /opt/nvm \
+    && curl -s -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)/install.sh | bash \
+    && bash -c 'source /opt/nvm/nvm.sh && nvm install --lts && nvm alias default lts/* && nvm use default && node_path="$(nvm which default)" && node_dir="$(dirname "$node_path")" && node_prefix="$(dirname "$node_dir")" && ln -sfn "$node_prefix" /opt/nvm/versions/node/default && nvm cache clear' \
+    && chmod -R a+rx /opt/nvm
+
+# Dynamically set PATH to latest installed Node version (supports nvm updates without rebuilds)
+RUN echo 'export NVM_DIR=/opt/nvm && [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" && export PATH=$(ls -d $NVM_DIR/versions/node/*/bin 2>/dev/null | head -1):$PATH' >> /etc/profile.d/load-nvm.sh \
+    && chmod +x /etc/profile.d/load-nvm.sh
+
+ENV PATH=/opt/nvm/versions/node/default/bin:${PATH}
 
 # Pre-create directories with proper permissions before VS Code init runs.
 # VS Code's container setup (pre-postCreateCommand) creates missing dirs as root,

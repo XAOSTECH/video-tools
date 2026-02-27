@@ -27,11 +27,11 @@
       "url": "https://mcp.stackoverflow.com"
     },
     "firecrawl": {
-      "command": "/home/CST/.config/nvm/versions/node/v25.5.0/bin/npx",
+      "command": "/opt/nvm/versions/node/v22.22.0/bin/npx",
       "args": ["-y", "firecrawl-mcp"],
       "env": {
         "FIRECRAWL_API_KEY": "${input:firecrawlApiKey}",
-        "PATH": "/home/CST/.config/nvm/versions/node/v25.5.0/bin:${env:PATH}"
+        "PATH": "/opt/nvm/versions/node/v22.22.0/bin:${env:PATH}"
       },
       "type": "stdio"
     }

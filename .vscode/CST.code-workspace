@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"workbench.colourCustomizations": {
+		"workbench.colorCustomizations": {
 			// ═══════════════════════════════════════════════════════════
 			// 🎨 Neon Nights
 			// Generated with vscode-theme-gen using pastel
