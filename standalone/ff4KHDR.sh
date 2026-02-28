@@ -1,3 +1,4 @@
+
 echo "Script run by xaoscience at 2025-08-25 09:13:30 UTC"
 BUS_DEV=$(lsusb | grep 'UGREEN 25173' | awk '{print $2"/"$4}' | sed 's/://')
 USB_PATH="/dev/bus/usb/${BUS_DEV}"

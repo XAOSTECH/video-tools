@@ -1,253 +1,292 @@
-# video-tools
+
 
 <!-- Project Shields/Badges -->
 <p align="center">
-  <a href="https://github.com/XAOSTECH/video-tools">
-    <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-XAOSTECH%2F-video-tools-181717?style=for-the-badge&logo=github">
-  </a>
-  <a href="https://github.com/XAOSTECH/video-tools/releases">
-    <img alt="GitHub release" src="https://img.shields.io/github/v/release/XAOSTECH/video-tools?style=for-the-badge&logo=semantic-release&colour=blue">
-  </a>
   <a href="https://github.com/XAOSTECH/video-tools/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/XAOSTECH/video-tools?style=for-the-badge&colour=green">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/XAOSTECH/video-tools/actions">
-    <img alt="CI Status" src="https://github.com/XAOSTECH/video-tools/actions/workflows/bash-lint.yml/badge.svg?branch=Main>
+    <img alt="License" src="https://img.shields.io/github/license/XAOSTECH/video-tools?style=flat-square&colour=green">
   </a>
   <a href="https://github.com/XAOSTECH/video-tools/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/XAOSTECH/video-tools?style=flat-square&logo=github&colour=yellow">
   </a>
-  <a href="https://github.com/XAOSTECH/video-tools/pulls">
-    <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/XAOSTECH/video-tools?style=flat-square&logo=github&colour=purple">
-  </a>
   <a href="https://github.com/XAOSTECH/video-tools/stargazers">
     <img alt="Stars" src="https://img.shields.io/github/stars/XAOSTECH/video-tools?style=flat-square&logo=github&colour=gold">
   </a>
-  <a href="https://github.com/XAOSTECH/video-tools/network/members">
-    <img alt="Forks" src="https://img.shields.io/github/forks/XAOSTECH/video-tools?style=flat-square&logo=github">
-  </a>
-</p>
-
-<p align="center">
-  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/XAOSTECH/video-tools?style=flat-square&logo=git&colour=blue">
-  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/XAOSTECH/video-tools?style=flat-square&logo=files&colour=teal">
-  <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/XAOSTECH/video-tools?style=flat-square&logo=files&colour=orange">
+  <!-- <img alt="Repo Size" src="https://img.shields.io/github/repo-size/XAOSTECH/video-tools?style=flat-square&logo=files&colour=teal">
+  <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/XAOSTECH/video-tools?style=flat-square&logo=files&colour=orange"> -->
   <img alt="Contributors" src="https://img.shields.io/github/contributors/XAOSTECH/video-tools?style=flat-square&logo=github&colour=green">
-</p>
-
-<!-- Optional: Stability/Maturity Badge -->
-<p align="center">
-  <img alt="Stability" src="https://img.shields.io/badge/stability-beta-yellow?style=flat-square">
   <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2026?style=flat-square">
 </p>
 
----
+# XAOSTECH video-tools
 
-<p align="center">
-  <b>Unix Video Toolset</b>
-</p>
+Professional Linux video capture, streaming, and HDR encoding toolset. Integrate low-cost USB capture devices, build P010 10-bit kernel support, and stream 4K HDR to YouTube with GPU acceleration. Some of these produce shims that conflict with secure boot unless enrolled with a MOK.
 
----
+## 🎯 Project Modules
 
-## 📋 Table of Contents
+This monorepo contains standalone, production-ready modules:
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Configuration](#-configuration)
-- [Documentation](#-documentation)
-- [Contributing](#-contributing)
-- [Roadmap](#-roadmap)
-- [Support](#-support)
-- [License](#-license)
-- [Acknowledgements](#-acknowledgements)
+### **op-cap** — USB Capture Optimizationg
+Linux capture device automation with v4l2loopback, auto-reconnect, and crash recovery.
+- ✅ v4l2loopback isolation & feed relay
+- ✅ Auto-reconnect on device disconnect
+- ✅ OBS crash recovery (auto-restart + auto-resume stream)
+- ✅ USB device reset & driver rebind
+- ✅ Wayland graphics optimization
+- ✅ HDR passthrough (NV12)
 
----
-
-## 🔍 Overview
-
-Unix Video Toolset
-
-### Why video-tools?
-
-{{WHY_PROJECT}}
+**Quick Start**: `make install && make optimise-drivers`  
+**Docs**: [op-cap/docs/README.md](../op-cap/docs/README.md)   
+**Note**: v42cl-loopback installation may require MOK enrollment or disabling secure boot
 
 ---
 
-## ✨ Features
+### **copt** — Capture & Streaming Automation
+FFmpeg-based capture relay with P010 HDR support, HLS streaming, and YouTube integration.
+- ✅ NV12 capture (immediate) / P010 10-bit (with kernel patch)
+- ✅ GPU encoding (NVIDIA NVENC HEVC Main10)
+- ✅ Full HDR metadata (BT.2020, SMPTE2084, mastering display)
+- ✅ HLS HTTP PUT relay to YouTube Live
+- ✅ Auto-reconnect on source disconnect
+- ✅ Bandwidth limiting & performance tuning
 
-- 🚀 **Feature 1** - Description of feature 1
-- 🔧 **Feature 2** - Description of feature 2
-- 📦 **Feature 3** - Description of feature 3
-- 🔒 **Feature 4** - Description of feature 4
-- ⚡ **Feature 5** - Description of feature 5
+**Quick Start**: `export COPT_FFMPEG_BIN=~/.local/bin/ffmpeg && copt-worker stream`  
+**Docs**: [copt/docs/README.md](../copt/docs/README.md) | [P010_README.md](P010_README.md)
 
 ---
 
-## 📥 Installation
+### **P010_for_V4L2** — Kernel HDR Support (Submodule)
+Linux kernel patches for native 10-bit P010 video format capture.
+- ✅ 3 surgical kernel modifications (~20 lines)
+- ✅ DKMS auto-installer
+- ✅ Works with standard Linux USB UVC
+- ✅ Tested: Ubuntu 24.04, Raspberry Pi
 
-### Prerequisites
+**Install**: `sudo copt/scripts/setup-p010-support.sh`  
+**Credits**: [@awawa-dev](https://github.com/awawa-dev) — [upstream repo](https://github.com/awawa-dev/P010_for_V4L2)  [(licence)](https://github.com/awawa-dev/P010_for_V4L2?tab=MIT-1-ov-file)  
+**Detailed Guide**: [P010 Kernel Support](../copt/docs/P010_KERNEL_SUPPORT.md)  
+**Note**: Installation requires MOK enrollment or disabling secure boot
 
-- {{PREREQUISITE_1}}
-- {{PREREQUISITE_2}}
-- {{PREREQUISITE_3}}
+---
 
-### Quick Start
+## 🚀 Quick Start
 
+### Scenario 1: Stable OBS Capture (op-cap only)
 ```bash
-# Clone the repository
-git clone https://github.com/XAOSTECH/video-tools.git
-cd video-tools
-
-# Run installation
-./install.sh
-
-# Or manual installation
-{{MANUAL_INSTALL_STEPS}}
+cd op-cap
+make install
+make optimise-drivers
+# Launch OBS, add /dev/video10 as source
+# v42cl-loopback (video10) requires MOK enrollment or disabling secure boot
 ```
 
-### Package Managers
-
+### Scenario 2: YouTube HDR Streaming (op-cap + copt)
 ```bash
-# npm
-npm install {{PACKAGE_NAME}}
+# Install op-cap
+cd op-cap && make install && make optimise-drivers
 
-# yarn
-yarn add {{PACKAGE_NAME}}
+# Install copt & custom FFmpeg
+cd ../copt
+bash scripts/build-ffmpeg-hevc.sh
+export COPT_FFMPEG_BIN=~/.local/bin/ffmpeg
 
-# apt (Debian/Ubuntu)
-sudo apt install {{PACKAGE_NAME}}
-
-# brew (macOS)
-brew install {{PACKAGE_NAME}}
+# Start streaming
+copt-worker stream
 ```
 
----
-
-## 🚀 Usage
-
-### Basic Usage
-
+### Scenario 3: Full 10-bit Native P010 (all with kernel)
 ```bash
-{{BASIC_USAGE_EXAMPLE}}
-```
+# Setup P010 kernel support (requires reboot and MOK enrollment or disabling secure boot)
+sudo copt/scripts/setup-p010-support.sh
 
-### Advanced Usage
+# After reboot, verify
+v4l2-ctl -d /dev/video0 --list-formats-ext | grep -i p010
 
-```bash
-{{ADVANCED_USAGE_EXAMPLE}}
-```
-
-### Examples
-
-<details>
-<summary>📘 Example 1: {{EXAMPLE_1_TITLE}}</summary>
-
-```bash
-{{EXAMPLE_1_CODE}}
-```
-
-</details>
-
-<details>
-<summary>📗 Example 2: {{EXAMPLE_2_TITLE}}</summary>
-
-```bash
-{{EXAMPLE_2_CODE}}
-```
-
-</details>
-
----
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `{{ENV_VAR_1}}` | {{ENV_VAR_1_DESC}} | `{{ENV_VAR_1_DEFAULT}}` |
-| `{{ENV_VAR_2}}` | {{ENV_VAR_2_DESC}} | `{{ENV_VAR_2_DEFAULT}}` |
-
-### Configuration File
-
-```yaml
-# config.yml
-{{CONFIG_FILE_EXAMPLE}}
+# Use P010 for capture
+export COPT_USB_INPUT_FORMAT=p010
+copt-worker stream
 ```
 
 ---
 
-## 📚 Documentation
+## 📚 Comprehensive Guides
 
-| Document | Description |
-|----------|-------------|
-| [📖 Getting Started](docs/GETTING_STARTED.md) | Quick start guide |
-| [📋 API Reference](docs/API.md) | Complete API documentation |
-| [🔧 Configuration](docs/CONFIGURATION.md) | Configuration options |
-| [❓ FAQ](docs/FAQ.md) | Frequently asked questions |
+### For OBS USB Capture Users
+👉 **[op-cap README](../op-cap/docs/README.md)** — Device setup, crash recovery, troubleshooting
 
----
+### For HDR Streaming to YouTube
+👉 **[P010_README.md](P010_README.md)** — Complete HDR pipeline, NV12 vs P010, verification checklist
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting PRs.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-See also: [Code of Conduct](CODE_OF_CONDUCT.md) | [Security Policy](SECURITY.md)
+### For Advanced Configuration
+- [P010 Kernel Support Deep Dive](../copt/docs/P010_KERNEL_SUPPORT.md)
+- [Device Hardware Info & Accuracy](../op-cap/docs/DRIVER_INFO.md)
+- [Buffer Corruption Diagnosis](../op-cap/docs/BUFFER_CORRUPTION.md)
+- [USB Stability & Recovery](../op-cap/docs/USB_STABILITY.md)
+- [Wayland Graphics Optimization](../op-cap/docs/WAYLAND_OPTIMISATION.md)
 
 ---
 
-## 🗺️ Roadmap
+## ✨ Key Features
 
-- [x] {{COMPLETED_FEATURE_1}}
-- [x] {{COMPLETED_FEATURE_2}}
-- [ ] {{PLANNED_FEATURE_1}}
-- [ ] {{PLANNED_FEATURE_2}}
-- [ ] {{PLANNED_FEATURE_3}}
+### Crash Recovery (op-cap)
+- Automatic OBS restart on USB device crash
+- Stream resumption (if streaming before crash)
+- Exponential backoff (3 retry limit)
+- 3-second recovery timeout
 
-See the [open issues](https://github.com/XAOSTECH/video-tools/issues) for a full list of proposed features and known issues.
+### HDR Streaming (copt)
+- **4K @ 30fps** native P010 capture
+- **NVIDIA NVENC** GPU encoding (HEVC Main10)
+- **Full HDR metadata** (color space, tone curve, mastering display)
+- **YouTube recognition** verified working
+
+### USB Stability (op-cap)
+- Auto-reconnect on device disconnect
+- Device health monitoring
+- USB reset & driver rebind
+- Power optimization (disable autosuspend)
 
 ---
 
-## 💬 Support
+## 🔧 Module Integration
 
-- 📧 **Email**: {{SUPPORT_EMAIL}}
-- 💻 **Issues**: [GitHub Issues](https://github.com/XAOSTECH/video-tools/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/XAOSTECH/video-tools/discussions)
-- 📝 **Wiki**: [GitHub Wiki](https://github.com/XAOSTECH/video-tools/wiki)
+```
+HDMI Source
+    ↓
+op-cap (USB Capture + OBS)
+    ↓ [/dev/video10 loopback]
+copt (FFmpeg relay)
+    ↓ [P010 10-bit HEVC Main10]
+YouTube Live HLS
+    ↓
+YouTube recognizes as HDR ✓
+```
+
+---
+
+## 📋 System Requirements
+
+### Minimum
+- Linux kernel 5.10+
+- NVIDIA GPU with NVENC (RTX 2060+) or compatible AMD/Intel
+- USB 3.0+ capture device (UGREEN 25173, Elgato HD60 S+, etc.)
+- 8GB RAM, 4 CPU cores
+
+### Recommended
+- Ubuntu 24.04 or later / Debian 12+
+- NVIDIA RTX 2060 SUPER or newer
+- Desktop environment: GNOME/KDE
+
+### Optional
+- P010_for_V4L2 kernel patches (for native 10-bit capture)
+- Custom FFmpeg build with NVENC (included script)
+
+---
+
+## 🏗️ Architecture
+
+```
+video-tools/
+├── op-cap/                          # USB capture & OBS stability
+│   ├── scripts/
+│   │   ├── obs-safe-launch.sh      # ← Crash recovery wrapper
+│   │   ├── auto_reconnect.sh       # ← Device monitoring
+│   │   ├── optimise_drivers.sh     # ← GPU driver fixes
+│   │   └── maintenance.sh          # ← Interactive recovery tools
+│   ├── lib/                        # Core libraries
+│   └── docs/
+│       ├── README.md              # Main op-cap guide
+│       ├── DRIVER_INFO.md         # Hardware specs
+│       └── USB_STABILITY.md       # Troubleshooting
+│
+├── copt/                            # Capture & streaming relay
+│   ├── scripts/
+│   │   ├── build-ffmpeg-hevc.sh   # Custom FFmpeg builder
+│   │   ├── setup-p010-support.sh  # ← Kernel patch installer
+│   │   └── hls-upload-relay.sh    # YouTube HLS uploader
+│   ├── lib/
+│   │   └── ffmpeg.sh              # HEVC Main10 encoder
+│   └── docs/
+│       ├── README.md
+│       └── P010_KERNEL_SUPPORT.md  # Kernel patching guide
+│
+├── P010_for_V4L2/                   # Submodule: Kernel patches
+│   ├── p010.patch                  # 3 kernel modifications
+│   ├── dkms-installer.sh          # DKMS installer
+│   └── README.md                   # Upstream docs
+│
+└── docs/
+    ├── README.md                    # ← You are here
+    ├── P010_README.md              # Complete HDR guide
+    └── [standard files]
+```
+
+---
+
+## 🔄 Latest Updates
+
+### op-cap (OBS Safety & Stability)
+- **Crash Recovery** — Auto-restart OBS + resume stream on disconnect
+- **--no-device** flag — Launch OBS without device requirement
+- **--no-loopback** option — Direct device mode (skip v4l2loopback)
+- **Stream Detection** — Monitors logs to detect active streams before crash
+- **3-second Recovery** — Fast restart after device failure
+
+### copt (HDR Streaming)
+- **Full HDR Metadata** — BT.2020 colorspace + SMPTE2084 tone curve
+- **Mastering Display Info** — Content light level integration
+- **HLS Playlist Upload** — Fixed m3u8 relay to YouTube every 3-5 seconds
+- **Bandwidth Control** — Limit streaming bitrate dynamically
+
+---
+
+## 🙏 Credits & Attribution
+
+### Original Authors
+- **XAOSTECH** — Integration, testing, documentation
+- **@awawa-dev** — [P010_for_V4L2](https://github.com/awawa-dev/P010_for_V4L2) kernel patches, HyperHDR research
+
+### Standards & References
+- USB UVC 1.0+ specification
+- HEVC/H.265 Main10 profile (HDR10)
+- ITU-R BT.2100 (HDR color space)
+- SMPTE ST 2084 (PQ tone curve)
+- YouTube HLS Live streaming API
 
 ---
 
 ## 📄 License
 
-Distributed under the GPL-3.0 License. See [`LICENSE`](LICENSE) for more information.
+All modules distributed under **GPL-3.0 License**. See individual `LICENSE` files in each module.
 
 ---
 
-## 🙏 Acknowledgements
+## 💬 Support & Contributing
 
-- {{ACKNOWLEDGMENT_1}}
-- {{ACKNOWLEDGMENT_2}}
-- {{ACKNOWLEDGMENT_3}}
+- 📧 **Issues**: [GitHub Issues](https://github.com/XAOSTECH/video-tools/issues)
+- 🤝 **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md)
+- 📖 **Code of Conduct**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
+---
+
+## 🚀 Getting Help
+
+**OBS keeps crashing?** → [op-cap README crash recovery section](../op-cap/docs/README.md#obs-setup)
+
+**YouTube not recognizing HDR?** → [P010_README.md verification checklist](P010_README.md#verify-youtube-hdr-recognition)
+
+**Device not detected?** → [op-cap troubleshooting](../op-cap/docs/README.md#troubleshooting)
+
+**Building FFmpeg fails?** → [copt FFmpeg builder](../copt/scripts/build-ffmpeg-hevc.sh) — check script comments for common issues
 
 ---
 
 <p align="center">
-  <a href="https://github.com/XAOSTECH">
-    <img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20by-XAOSTECH-red?style=for-the-badge">
-  </a>
+  <b>Made with ❤️ by XAOSTECH</b><br>
+  <a href="https://github.com/XAOSTECH/video-tools">GitHub</a> • 
+  <a href="https://github.com/XAOSTECH/video-tools/releases">Releases</a> •
+  <a href="https://github.com/XAOSTECH/video-tools/issues">Issues</a>
 </p>
 
-<p align="center">
-  <a href="#video-tools">⬆️ Back to Top</a>
-</p>
+**Status**: Production Ready ✅  
+**Last Updated**: Feb 2026  
+**Tested**: Ubuntu 24.04, UGREEN 25173, NVIDIA RTX 2060 SUPER, YouTube Live
