@@ -8,7 +8,7 @@ Capture true HDR video from UGREEN 25173 (or similar UVC devices), encode on GPU
 
 ```
 HDMI HDR Source → UGREEN USB Capture → P010 Linux → GPU NVENC → YouTube HDR
-  (4K content)     (native 10-bit)     (kernel)    (h.265)      (recognized!)
+  (4K content)     (native 10-bit)     (kernel)    (h.265)      (recognised!)
 ```
 
 ## Quick Status
@@ -52,7 +52,7 @@ copt-worker stream
 
 **Quality**: Optimal HDR (native 10-bit capture) ⭐  
 **Time**: 20 minutes total (setup + reboot)  
-**Benefit**: Better color grading, cleaner encoding, future-proof
+**Benefit**: Better colour grading, cleaner encoding, future-proof
 
 ## Directory Structure
 
@@ -172,7 +172,7 @@ SMPTE2084 transfer function
 Mastering display (10000 nits)
 Content light level (1000/400)
     ↓ [HLS HTTP PUT]
-YouTube Live Stream → YouTube recognizes as HDR ✓
+YouTube Live Stream → YouTube recognises as HDR ✓
 ```
 
 ### Hardware Accuracy
@@ -200,8 +200,8 @@ UGREEN 25173 brightness accuracy test (200 nit input):
 - ✅ P010 available (native 10-bit) - optional upgrade
 - ✅ Custom FFmpeg (NVENC + CUDA working)
 - ✅ Auto-reconnect (USB plug-unplug handled gracefully)
-- ✅ Full HDR metadata (color space, transfer, mastering display)
-- ✅ YouTube recognizes as HDR (tested, working)
+- ✅ Full HDR metadata (colour space, transfer, mastering display)
+- ✅ YouTube recognises as HDR (tested, working)
 
 ## Performance
 
@@ -212,7 +212,7 @@ Input:   3840x2160@30fps, NV12 8-bit
 Output:  HEVC Main10, p010le 10-bit
 Bitrate: 25 Mbps
 Speed:   0.7-0.85x real-time (i.e., 30fps encode takes ~35-40 seconds per 30 seconds)
-GPU:     ~20-40% utilization (plenty of headroom)
+GPU:     ~20-40% utilisation (plenty of headroom)
 CPU:     ~2-5% (minimal, GPU-focused)
 Power:   ~150W (GPU + encoders + system)
 Heat:    Stable, GPU <60°C
@@ -262,7 +262,7 @@ export COPT_FFMPEG_BIN=~/.local/bin/ffmpeg
 - X Custom FFmpeg 7.1.1 build script (NVENC + CUDA)
 - 🔧 P010_for_V4L2 integration (workspace root submodule)
 - 📜 Automated setup script + comprehensive docs
-- 🎯 Complete HDR metadata pipeline (color space, transfer, mastering display)
+- 🎯 Complete HDR metadata pipeline (colour space, transfer, mastering display)
 - 🛠️ USB auto-reconnect fix
 
 **Upstream (Credit)**:
@@ -273,7 +273,7 @@ export COPT_FFMPEG_BIN=~/.local/bin/ffmpeg
 **Standards**:
 - USB UVC 1.0+ specification
 - HEVC/H.265 Main10 profile (HDR10)
-- IEC 61966-2-4 / ITU-R BT.2100 (HDR color space)
+- IEC 61966-2-4 / ITU-R BT.2100 (HDR colour space)
 - SMPTE ST 2084 (PQ tone curve)
 
 ## Questions?
