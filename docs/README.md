@@ -31,12 +31,12 @@ Linux capture device automation with v4l2loopback, auto-reconnect, and crash rec
 - ✅ Auto-reconnect on device disconnect
 - ✅ OBS crash recovery (auto-restart + auto-resume stream)
 - ✅ USB device reset & driver rebind
-- ✅ Wayland graphics optimization
+- ✅ Wayland graphics optimisation
 - ✅ HDR passthrough (NV12)
 
 **Quick Start**: `make install && make optimise-drivers`  
 **Docs**: [op-cap/docs/README.md](../op-cap/docs/README.md)   
-**Note**: v42cl-loopback installation may require MOK enrollment or disabling secure boot
+**Note**: v42cl-loopback installation may require MOK enrolment or disabling secure boot
 
 ---
 
@@ -64,7 +64,7 @@ Linux kernel patches for native 10-bit P010 video format capture.
 **Install**: `sudo copt/scripts/setup-p010-support.sh`  
 **Credits**: [@awawa-dev](https://github.com/awawa-dev) — [upstream repo](https://github.com/awawa-dev/P010_for_V4L2)  [(licence)](https://github.com/awawa-dev/P010_for_V4L2?tab=MIT-1-ov-file)  
 **Detailed Guide**: [P010 Kernel Support](../copt/docs/P010_KERNEL_SUPPORT.md)  
-**Note**: Installation requires MOK enrollment or disabling secure boot
+**Note**: Installation requires MOK enrolment or disabling secure boot
 
 ---
 
@@ -76,7 +76,7 @@ cd op-cap
 make install
 make optimise-drivers
 # Launch OBS, add /dev/video10 as source
-# v42cl-loopback (video10) requires MOK enrollment or disabling secure boot
+# v42cl-loopback (video10) requires MOK enrolment or disabling secure boot
 ```
 
 ### Scenario 2: YouTube HDR Streaming (op-cap + copt)
@@ -95,7 +95,7 @@ copt-worker stream
 
 ### Scenario 3: Full 10-bit Native P010 (all with kernel)
 ```bash
-# Setup P010 kernel support (requires reboot and MOK enrollment or disabling secure boot)
+# Setup P010 kernel support (requires reboot and MOK enrolment or disabling secure boot)
 sudo copt/scripts/setup-p010-support.sh
 
 # After reboot, verify
@@ -121,7 +121,7 @@ copt-worker stream
 - [Device Hardware Info & Accuracy](../op-cap/docs/DRIVER_INFO.md)
 - [Buffer Corruption Diagnosis](../op-cap/docs/BUFFER_CORRUPTION.md)
 - [USB Stability & Recovery](../op-cap/docs/USB_STABILITY.md)
-- [Wayland Graphics Optimization](../op-cap/docs/WAYLAND_OPTIMISATION.md)
+- [Wayland Graphics Optimisation](../op-cap/docs/WAYLAND_OPTIMISATION.md)
 
 ---
 
@@ -136,14 +136,14 @@ copt-worker stream
 ### HDR Streaming (copt)
 - **4K @ 30fps** native P010 capture
 - **NVIDIA NVENC** GPU encoding (HEVC Main10)
-- **Full HDR metadata** (color space, tone curve, mastering display)
+- **Full HDR metadata** (colour space, tone curve, mastering display)
 - **YouTube recognition** verified working
 
 ### USB Stability (op-cap)
 - Auto-reconnect on device disconnect
 - Device health monitoring
 - USB reset & driver rebind
-- Power optimization (disable autosuspend)
+- Power optimisation (disable autosuspend)
 
 ---
 
@@ -158,7 +158,7 @@ copt (FFmpeg relay)
     ↓ [P010 10-bit HEVC Main10]
 YouTube Live HLS
     ↓
-YouTube recognizes as HDR ✓
+YouTube recognises as HDR ✓
 ```
 
 ---
@@ -248,7 +248,7 @@ video-tools/
 ### Standards & References
 - USB UVC 1.0+ specification
 - HEVC/H.265 Main10 profile (HDR10)
-- ITU-R BT.2100 (HDR color space)
+- ITU-R BT.2100 (HDR colour space)
 - SMPTE ST 2084 (PQ tone curve)
 - YouTube HLS Live streaming API
 
@@ -272,7 +272,7 @@ All modules distributed under **GPL-3.0 License**. See individual `LICENSE` file
 
 **OBS keeps crashing?** → [op-cap README crash recovery section](../op-cap/docs/README.md#obs-setup)
 
-**YouTube not recognizing HDR?** → [P010_README.md verification checklist](P010_README.md#verify-youtube-hdr-recognition)
+**YouTube not recognising HDR?** → [P010_README.md verification checklist](P010_README.md#verify-youtube-hdr-recognition)
 
 **Device not detected?** → [op-cap troubleshooting](../op-cap/docs/README.md#troubleshooting)
 
