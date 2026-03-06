@@ -254,9 +254,9 @@ video-tools/
 
 ---
 
-## 📄 License
+## 📄 Licence
 
-All modules distributed under **GPL-3.0 License**. See individual `LICENSE` files in each module.
+All modules distributed under **GPL-3.0 Licence**. See individual `LICENCE` files in each module.
 
 ---
 
