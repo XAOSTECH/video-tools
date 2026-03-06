@@ -28,7 +28,7 @@ jobs:
           private-key: ${{ secrets['XB_PK'] }}
 
       - name: Setup bot identity
-        uses: XAOSTECH/dev-control/.github/actions/identity@main
+        uses: XAOSTECH/dev-control/.github/actions/identity@b067f72ca7f849b734a45634f23581a739d5146f # v2.0.0
         with:
           gpg-private-key: ${{ secrets['XB_GK'] }}
           gpg-passphrase: ${{ secrets['XB_GP'] }}
@@ -297,6 +297,7 @@ jobs:
           plows|ploughs|plow → plough
           plowed|ploughed|plow → plough
           plowing|ploughing|plow → plough
+          license|licence|license → licence
           WORDLIST
 
           # Find files to check
@@ -306,7 +307,8 @@ jobs:
             ! -path "./vendor/*" \
             ! -path "./.github/workflows/*" \
             ! -path "./workflows-templates/anglicise.yml" \
-            ! -path "./license-templates/*" \
+            ! -path "./licence-templates/*" \
+            ! -path "./LICENSE" \
             2>/dev/null | sort)
 
           echo "## British English Spelling Check" >> $GITHUB_STEP_SUMMARY
@@ -390,7 +392,8 @@ jobs:
             ! -path "./vendor/*" \
             ! -path "./.github/workflows/*" \
             ! -path "./workflows-templates/anglicise.yml" \
-            ! -path "./license-templates/*" \
+            ! -path "./licence-templates/*" \
+            ! -path "./LICENSE" \
             2>/dev/null)
           
           FIXED_COUNT=0
@@ -465,7 +468,7 @@ jobs:
       - name: Setup bot identity (if fixes needed)
         id: import_gpg
         if: steps.check.outputs.needs_fix == 'true'
-        uses: XAOSTECH/dev-control/.github/actions/identity@main
+        uses: XAOSTECH/dev-control/.github/actions/identity@b067f72ca7f849b734a45634f23581a739d5146f # v2.0.0
         with:
           gpg-private-key: ${{ secrets['XB_GK'] }}
           gpg-passphrase: ${{ secrets['XB_GP'] }}
