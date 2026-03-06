@@ -2,8 +2,8 @@
 
 <!-- Project Shields/Badges -->
 <p align="center">
-  <a href="https://github.com/XAOSTECH/video-tools/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/XAOSTECH/video-tools?style=flat-square&colour=green">
+  <a href="https://github.com/XAOSTECH/video-tools/blob/main/LICENCE">
+    <img alt="Licence" src="https://img.shields.io/github/licence/XAOSTECH/video-tools?style=flat-square&colour=green">
   </a>
   <a href="https://github.com/XAOSTECH/video-tools/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/XAOSTECH/video-tools?style=flat-square&logo=github&colour=yellow">
@@ -254,9 +254,9 @@ video-tools/
 
 ---
 
-## 📄 License
+## 📄 Licence
 
-All modules distributed under **GPL-3.0 License**. See individual `LICENSE` files in each module.
+All modules distributed under **GPL-3.0 Licence**. See individual `LICENCE` files in each module.
 
 ---
 
