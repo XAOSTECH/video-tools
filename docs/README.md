@@ -130,7 +130,7 @@ copt-worker stream
 ### Crash Recovery (op-cap)
 - Automatic OBS restart on USB device crash
 - Stream resumption (if streaming before crash)
-- Exponential backoff (3 retry limit)
+- No cumulative retry cap by default (optional per-crash limit)
 - 3-second recovery timeout
 
 ### HDR Streaming (copt)
