@@ -35,10 +35,10 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 
 ENV LANG=en_GB.UTF-8 \
     LC_ALL=en_GB.UTF-8 \
-    TZ=Europe/Brussels \
+    TZ=UTC \
     EDITOR=nano
 
-RUN ln -snf /usr/share/zoneinfo/Europe/Brussels /etc/localtime && echo Europe/Brussels > /etc/timezone
+RUN ln -snf /usr/share/zoneinfo/UTC /etc/localtime && echo UTC > /etc/timezone
 
 # Install GitHub CLI
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
