@@ -1,0 +1,524 @@
+{
+  "metadata": {
+    "repository": "video-tools",
+    "current_branch": "main",
+    "repo_url": "https://github.com/XAOSTECH/video-tools",
+    "generated": "2026-03-30T02:12:07Z",
+    "max_commits": 500
+  },
+  "commits": [
+    {
+      "sha": "478cf7a235c837d31a003dd47a355a4844d471c0",
+      "short": "478cf7a",
+      "parents": "6428e85137932a361847862e17a0df7bac32afb9",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-23T17:54:52+01:00",
+      "timestamp": 1774284892,
+      "subject": "chore(dc-init): load workflows,actions",
+      "refs": "HEAD -> main, origin/main",
+      "position": {
+        "x": 600,
+        "y": 60,
+        "lane": 0,
+        "radius": 6,
+        "depth": 0,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "6428e85137932a361847862e17a0df7bac32afb9",
+      "short": "6428e85",
+      "parents": "a45c24b85a6280d2902d2c5acaabc183add1369d",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-15T06:29:05+01:00",
+      "timestamp": 1773552545,
+      "subject": "chore(dc-init): update workflows,actions",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 100,
+        "lane": 0,
+        "radius": 6,
+        "depth": 1,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "a45c24b85a6280d2902d2c5acaabc183add1369d",
+      "short": "a45c24b",
+      "parents": "f8e219cf93767962291abb943aaf0e2e90ea3206",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-15T06:29:02+01:00",
+      "timestamp": 1773552542,
+      "subject": "chore(dc-init): recover interrupted update",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 140,
+        "lane": 0,
+        "radius": 6,
+        "depth": 2,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "f8e219cf93767962291abb943aaf0e2e90ea3206",
+      "short": "f8e219c",
+      "parents": "c0b7b4d43a9df1346ff6e96e0122178916ed3073 eb1cbd571e5951a7fec4ea0c8e165bd97bac0ac5",
+      "author": "xaostech[bot]",
+      "email": "260314499+xaostech[bot]@users.noreply.github.com",
+      "date": "2026-03-14T20:20:45Z",
+      "timestamp": 1773519645,
+      "subject": "Merge pull request #4 from XAOSTECH:chore/update-submodules-20260314-202008",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 180,
+        "lane": 0,
+        "radius": 10,
+        "depth": 3,
+        "is_trunk": true,
+        "is_merge": true,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "eb1cbd571e5951a7fec4ea0c8e165bd97bac0ac5",
+      "short": "eb1cbd5",
+      "parents": "c0b7b4d43a9df1346ff6e96e0122178916ed3073",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-14T20:20:08Z",
+      "timestamp": 1773519608,
+      "subject": "chore: update 5 submodule(s) to latest",
+      "refs": "",
+      "position": {
+        "x": 720,
+        "y": 220,
+        "lane": 1,
+        "radius": 6,
+        "depth": 4,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "c0b7b4d43a9df1346ff6e96e0122178916ed3073",
+      "short": "c0b7b4d",
+      "parents": "ac5c738487a1ca26da5cbb10f101f0ae339341c7",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-14T21:19:30+01:00",
+      "timestamp": 1773519570,
+      "subject": "chore(dc-init): update workflows/actions",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 300,
+        "lane": 0,
+        "radius": 9,
+        "depth": 5,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "ab5b0936a0cafea18cbbcac23f4715464eaf83ea",
+      "short": "ab5b093",
+      "parents": "c85fc486d758dbd229fb740253fd204b0a0e4d74",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-14T20:13:47Z",
+      "timestamp": 1773519227,
+      "subject": "chore: update 5 submodule(s) to latest",
+      "refs": "origin/chore/update-submodules-20260314-201347",
+      "position": {
+        "x": 480,
+        "y": 340,
+        "lane": -1,
+        "radius": 6,
+        "depth": 6,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "c85fc486d758dbd229fb740253fd204b0a0e4d74",
+      "short": "c85fc48",
+      "parents": "ac5c738487a1ca26da5cbb10f101f0ae339341c7",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-14T21:13:06+01:00",
+      "timestamp": 1773519186,
+      "subject": "chore(dc-init): update workflows/actions",
+      "refs": "",
+      "position": {
+        "x": 840,
+        "y": 420,
+        "lane": 2,
+        "radius": 6,
+        "depth": 7,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "47c795ede333e1aa77cd6a894e6d0021f0583668",
+      "short": "47c795e",
+      "parents": "6b6243c9955f120068397516f0e80ae15cd09a40",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-14T20:10:07Z",
+      "timestamp": 1773519007,
+      "subject": "chore: update 5 submodule(s) to latest",
+      "refs": "origin/chore/update-submodules-20260314-201007",
+      "position": {
+        "x": 360,
+        "y": 500,
+        "lane": -2,
+        "radius": 6,
+        "depth": 8,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "6b6243c9955f120068397516f0e80ae15cd09a40",
+      "short": "6b6243c",
+      "parents": "ac5c738487a1ca26da5cbb10f101f0ae339341c7",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-14T21:09:14+01:00",
+      "timestamp": 1773518954,
+      "subject": "chore(dc-init): update workflows/actions",
+      "refs": "",
+      "position": {
+        "x": 960,
+        "y": 580,
+        "lane": 3,
+        "radius": 6,
+        "depth": 9,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "ac5c738487a1ca26da5cbb10f101f0ae339341c7",
+      "short": "ac5c738",
+      "parents": "d2bd2ed71d65090876b3d203f80e48c357870caa",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-14T18:05:28+01:00",
+      "timestamp": 1773507928,
+      "subject": "chore(dc-contain) + fix (replace.yml): remove dash",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 660,
+        "lane": 0,
+        "radius": 9,
+        "depth": 10,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "d2bd2ed71d65090876b3d203f80e48c357870caa",
+      "short": "d2bd2ed",
+      "parents": "aac0ca20644697d098dc71a50691f16da6769af8 b5d5eb60cbd0b0fb3269028cc780c0dd11355b9b",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-06T02:21:53Z",
+      "timestamp": 1772763713,
+      "subject": "Merge pull request #3 from XAOSTECH:anglicise/20260306-022118\\n\\nchore: Convert American spellings to British English",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 700,
+        "lane": 0,
+        "radius": 10,
+        "depth": 11,
+        "is_trunk": true,
+        "is_merge": true,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "b5d5eb60cbd0b0fb3269028cc780c0dd11355b9b",
+      "short": "b5d5eb6",
+      "parents": "aac0ca20644697d098dc71a50691f16da6769af8",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-06T02:21:18Z",
+      "timestamp": 1772763678,
+      "subject": "chore: convert American spellings to British English",
+      "refs": "",
+      "position": {
+        "x": 240,
+        "y": 740,
+        "lane": -3,
+        "radius": 6,
+        "depth": 12,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "4928eeb02e2e36859b7495b379044a2141a43370",
+      "short": "4928eeb",
+      "parents": "4fc3ed297e64116ac72b7563946077e654105924",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-06T02:12:56Z",
+      "timestamp": 1772763176,
+      "subject": "chore: convert American spellings to British English",
+      "refs": "origin/anglicise/20260306-021256",
+      "position": {
+        "x": 1080,
+        "y": 820,
+        "lane": 4,
+        "radius": 6,
+        "depth": 13,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "4fc3ed297e64116ac72b7563946077e654105924",
+      "short": "4fc3ed2",
+      "parents": "59ba59d1144b244879653d615ea863c53efaaec5",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-06T03:05:23+01:00",
+      "timestamp": 1772762723,
+      "subject": "chore: dc-init 2",
+      "refs": "",
+      "position": {
+        "x": 120,
+        "y": 900,
+        "lane": -4,
+        "radius": 6,
+        "depth": 14,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "aac0ca20644697d098dc71a50691f16da6769af8",
+      "short": "aac0ca2",
+      "parents": "59ba59d1144b244879653d615ea863c53efaaec5",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-06T03:05:23+01:00",
+      "timestamp": 1772762723,
+      "subject": "chore: dc-init 2",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 980,
+        "lane": 0,
+        "radius": 9,
+        "depth": 15,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "59ba59d1144b244879653d615ea863c53efaaec5",
+      "short": "59ba59d",
+      "parents": "0acaba1bdf1d8b18e8a702d519a30861705d4062",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-06T02:55:45+01:00",
+      "timestamp": 1772762145,
+      "subject": "Update monorepo docs: reflect unlimited crash recovery, fix crash limit references",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1020,
+        "lane": 0,
+        "radius": 9,
+        "depth": 16,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "0acaba1bdf1d8b18e8a702d519a30861705d4062",
+      "short": "0acaba1",
+      "parents": "be1fc23c82f513f079f67f671f00ec617777030c 7728aff1a8a81ab19b4f0be71faea7fe00431a39",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-01T02:26:22Z",
+      "timestamp": 1772331982,
+      "subject": "Merge pull request #1 from XAOSTECH:anglicise/20260301-022549\\n\\nchore: Convert American spellings to British English",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1060,
+        "lane": 0,
+        "radius": 10,
+        "depth": 17,
+        "is_trunk": true,
+        "is_merge": true,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "7728aff1a8a81ab19b4f0be71faea7fe00431a39",
+      "short": "7728aff",
+      "parents": "be1fc23c82f513f079f67f671f00ec617777030c",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-03-01T02:25:49Z",
+      "timestamp": 1772331949,
+      "subject": "chore: convert American spellings to British English",
+      "refs": "",
+      "position": {
+        "x": 1200,
+        "y": 1100,
+        "lane": 5,
+        "radius": 6,
+        "depth": 18,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "be1fc23c82f513f079f67f671f00ec617777030c",
+      "short": "be1fc23",
+      "parents": "4bfff0478130adcc95690ecd0a369adb1b0e5854",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-02-28T17:43:10+01:00",
+      "timestamp": 1772296990,
+      "subject": "Update main documentation: integrate all modules with credits",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1180,
+        "lane": 0,
+        "radius": 9,
+        "depth": 19,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "4bfff0478130adcc95690ecd0a369adb1b0e5854",
+      "short": "4bfff04",
+      "parents": "8999317276fbe2fbc3b4552f3970743e42c8133e",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-02-27T01:20:31+01:00",
+      "timestamp": 1772151631,
+      "subject": "chore: dc-contain + americanise",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1220,
+        "lane": 0,
+        "radius": 6,
+        "depth": 20,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "8999317276fbe2fbc3b4552f3970743e42c8133e",
+      "short": "8999317",
+      "parents": "ba392deebec6fb8d3c32929e45b91077a9cf28e5",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-02-24T00:00:36+01:00",
+      "timestamp": 1771887636,
+      "subject": "docs: comprehensive P010 HDR integration README at workspace root",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1260,
+        "lane": 0,
+        "radius": 6,
+        "depth": 21,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "ba392deebec6fb8d3c32929e45b91077a9cf28e5",
+      "short": "ba392de",
+      "parents": "4b54122bd47325576e46ddd3191da7707c9b715d",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-02-23T23:52:25+01:00",
+      "timestamp": 1771887145,
+      "subject": "chore: add P010_for_V4L2 as submodule for Linux HDR kernel support",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1300,
+        "lane": 0,
+        "radius": 6,
+        "depth": 22,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "4b54122bd47325576e46ddd3191da7707c9b715d",
+      "short": "4b54122",
+      "parents": "",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-02-23T01:13:31+01:00",
+      "timestamp": 1771805611,
+      "subject": "dc-init",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 1340,
+        "lane": 0,
+        "radius": 6,
+        "depth": 23,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    }
+  ],
+  "branches": [
+    {
+      "name": "478cf7a235c837d31a003dd47a355a4844d471c0 chore(dc-init): load workflows,actions",
+      "sha": "*",
+      "current": false,
+      "merged": false
+    }
+  ],
+  "tags": []
+}

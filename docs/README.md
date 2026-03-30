@@ -290,3 +290,13 @@ All modules distributed under **GPL-3.0 Licence**. See individual `LICENCE` file
 **Status**: Production Ready ✅  
 **Last Updated**: Feb 2026  
 **Tested**: Ubuntu 24.04, UGREEN 25173, NVIDIA RTX 2060 SUPER, YouTube Live
+
+<!-- TREE-VIZ-START -->
+
+## Git Tree Visualisation
+
+![Git Tree Visualisation](../.github/tree-viz/git-tree-mini.svg)
+
+[Full SVG](../.github/tree-viz/git-tree.svg) · [Interactive version](../.github/tree-viz/git-tree.html) · [View data](../.github/tree-viz/git-tree-data.json)
+
+<!-- TREE-VIZ-END -->
