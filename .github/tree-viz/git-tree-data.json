@@ -3,10 +3,32 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-03-30T02:12:07Z",
+    "generated": "2026-04-06T02:13:08Z",
     "max_commits": 500
   },
   "commits": [
+  {
+    "sha": "651e60fd20ff00c9f15163dff1c293d62ed9960a",
+    "short": "651e60f",
+    "parents": "7a3b1de96c22991c9bbfc093f9075d3145680161",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-04-06T02:12:41Z",
+    "timestamp": 1775441561,
+    "subject": "chore: update 3 submodule(s) to latest",
+    "refs": "origin/chore/update-submodules-20260406-021241"
+  },
+  {
+    "sha": "7a3b1de96c22991c9bbfc093f9075d3145680161",
+    "short": "7a3b1de",
+    "parents": "478cf7a235c837d31a003dd47a355a4844d471c0",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-03-30T02:12:07Z",
+    "timestamp": 1774836727,
+    "subject": "chore: update git tree visualisation",
+    "refs": "HEAD -> main, origin/main"
+  },
   {
     "sha": "478cf7a235c837d31a003dd47a355a4844d471c0",
     "short": "478cf7a",
@@ -16,7 +38,7 @@
     "date": "2026-03-23T17:54:52+01:00",
     "timestamp": 1774284892,
     "subject": "chore(dc-init): load workflows,actions",
-    "refs": "HEAD -> main, origin/main"
+    "refs": ""
   },
   {
     "sha": "6428e85137932a361847862e17a0df7bac32afb9",
@@ -273,7 +295,7 @@
   }
 ],
   "branches": [
-  {"name":"478cf7a235c837d31a003dd47a355a4844d471c0 chore(dc-init): load workflows,actions","sha":"*","current":false,"merged":false}
+  {"name":"7a3b1de96c22991c9bbfc093f9075d3145680161 chore: update git tree visualisation","sha":"*","current":false,"merged":false}
 ],
   "tags": [
 
