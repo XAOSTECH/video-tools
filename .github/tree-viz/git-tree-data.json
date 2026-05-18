@@ -3,10 +3,76 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-04-27T02:34:12Z",
+    "generated": "2026-05-18T03:27:22Z",
     "max_commits": 500
   },
   "commits": [
+  {
+    "sha": "e80ec01a9c29255502e928f0930ecbb76b23bb18",
+    "short": "e80ec01",
+    "parents": "3243a22bc414877eeb57d81714318ae02492aadd",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-05-18T03:26:55Z",
+    "timestamp": 1779074815,
+    "subject": "chore: update 1 submodule(s) to latest",
+    "refs": "origin/chore/update-submodules-20260518-032655"
+  },
+  {
+    "sha": "3243a22bc414877eeb57d81714318ae02492aadd",
+    "short": "3243a22",
+    "parents": "fc435aa6928f910b1981bf2be01e8471676e0e0c f0485564b0a6dc010e72605e43d53c692d4b1453",
+    "author": "xaostech[bot]",
+    "email": "260314499+xaostech[bot]@users.noreply.github.com",
+    "date": "2026-05-11T02:53:11Z",
+    "timestamp": 1778467991,
+    "subject": "Merge pull request #8 from XAOSTECH:chore/update-submodules-20260511-025243",
+    "refs": "HEAD -> main, origin/main"
+  },
+  {
+    "sha": "f0485564b0a6dc010e72605e43d53c692d4b1453",
+    "short": "f048556",
+    "parents": "fc435aa6928f910b1981bf2be01e8471676e0e0c",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-05-11T02:52:43Z",
+    "timestamp": 1778467963,
+    "subject": "chore: update 3 submodule(s) to latest",
+    "refs": ""
+  },
+  {
+    "sha": "fc435aa6928f910b1981bf2be01e8471676e0e0c",
+    "short": "fc435aa",
+    "parents": "f57dd4e62fa6a72a70bd8b33a8140856295f524b f1ef712cf0e16acf8034d617da4e4f7bcee84b46",
+    "author": "xaostech[bot]",
+    "email": "260314499+xaostech[bot]@users.noreply.github.com",
+    "date": "2026-05-04T02:39:00Z",
+    "timestamp": 1777862340,
+    "subject": "Merge pull request #7 from XAOSTECH:chore/update-submodules-20260504-023828",
+    "refs": ""
+  },
+  {
+    "sha": "f1ef712cf0e16acf8034d617da4e4f7bcee84b46",
+    "short": "f1ef712",
+    "parents": "f57dd4e62fa6a72a70bd8b33a8140856295f524b",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-05-04T02:38:28Z",
+    "timestamp": 1777862308,
+    "subject": "chore: update 1 submodule(s) to latest",
+    "refs": ""
+  },
+  {
+    "sha": "f57dd4e62fa6a72a70bd8b33a8140856295f524b",
+    "short": "f57dd4e",
+    "parents": "f6baecd12e49e2020a44423c626f44fbe19c5e1f",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-04-27T02:34:12Z",
+    "timestamp": 1777257252,
+    "subject": "chore: update git tree visualisation",
+    "refs": ""
+  },
   {
     "sha": "f6baecd12e49e2020a44423c626f44fbe19c5e1f",
     "short": "f6baecd",
@@ -16,7 +82,7 @@
     "date": "2026-04-20T02:29:22Z",
     "timestamp": 1776652162,
     "subject": "chore: update git tree visualisation",
-    "refs": "HEAD -> main, origin/main"
+    "refs": ""
   },
   {
     "sha": "53e682bd92ea9de548932b0b9b117a9f241481ac",
@@ -361,7 +427,7 @@
   }
 ],
   "branches": [
-  {"name":"f6baecd12e49e2020a44423c626f44fbe19c5e1f chore: update git tree visualisation","sha":"*","current":false,"merged":false}
+  {"name":"3243a22bc414877eeb57d81714318ae02492aadd Merge pull request #8 from XAOSTECH:chore/update-submodules-20260511-025243","sha":"*","current":false,"merged":false}
 ],
   "tags": [
 
