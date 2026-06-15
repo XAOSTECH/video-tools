@@ -3,10 +3,115 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-06-01T03:45:55Z",
+    "generated": "2026-06-15T03:59:47Z",
     "max_commits": 500
   },
   "commits": [
+    {
+      "sha": "378da79e585ef6fda4b5eb6b95bd33af66b91688",
+      "short": "378da79",
+      "parents": "285b2ab03552fab072b53ed6824bbfe8d2d2b0f0",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-06-15T03:59:24Z",
+      "timestamp": 1781495964,
+      "subject": "chore: update 1 submodule(s) to latest",
+      "refs": "origin/chore/update-submodules-20260615-035924",
+      "position": {
+        "x": 600,
+        "y": 60,
+        "lane": 0,
+        "radius": 6,
+        "depth": 0,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "285b2ab03552fab072b53ed6824bbfe8d2d2b0f0",
+      "short": "285b2ab",
+      "parents": "736db9da4c65a5b2f3b6b366095168a6252ce5cf b9a69e268c4bb55614f9c51d4be9ddca039a028e",
+      "author": "xaostech[bot]",
+      "email": "260314499+xaostech[bot]@users.noreply.github.com",
+      "date": "2026-06-08T03:42:58Z",
+      "timestamp": 1780890178,
+      "subject": "Merge pull request #11 from XAOSTECH:chore/update-submodules-20260608-034231",
+      "refs": "HEAD -> main, origin/main",
+      "position": {
+        "x": 600,
+        "y": 100,
+        "lane": 0,
+        "radius": 10,
+        "depth": 1,
+        "is_trunk": true,
+        "is_merge": true,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "b9a69e268c4bb55614f9c51d4be9ddca039a028e",
+      "short": "b9a69e2",
+      "parents": "736db9da4c65a5b2f3b6b366095168a6252ce5cf",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-06-08T03:42:31Z",
+      "timestamp": 1780890151,
+      "subject": "chore: update 1 submodule(s) to latest",
+      "refs": "",
+      "position": {
+        "x": 720,
+        "y": 140,
+        "lane": 1,
+        "radius": 6,
+        "depth": 2,
+        "is_trunk": false,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "736db9da4c65a5b2f3b6b366095168a6252ce5cf",
+      "short": "736db9d",
+      "parents": "dc236037269428d6eee691f45dcebec019b8389c 3778c3f69c912f9453326dbe59fdda3577512e8b",
+      "author": "xaostech[bot]",
+      "email": "260314499+xaostech[bot]@users.noreply.github.com",
+      "date": "2026-06-01T03:46:06Z",
+      "timestamp": 1780285566,
+      "subject": "Merge pull request #10 from XAOSTECH:chore/update-submodules-20260601-034534",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 220,
+        "lane": 0,
+        "radius": 10,
+        "depth": 3,
+        "is_trunk": true,
+        "is_merge": true,
+        "is_fork": true
+      }
+    },
+    {
+      "sha": "dc236037269428d6eee691f45dcebec019b8389c",
+      "short": "dc23603",
+      "parents": "23a5d31a3d195c1b8c287c5841c79b3b139b30da",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-06-01T03:45:55Z",
+      "timestamp": 1780285555,
+      "subject": "chore: update git tree visualisation",
+      "refs": "",
+      "position": {
+        "x": 600,
+        "y": 260,
+        "lane": 0,
+        "radius": 6,
+        "depth": 4,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
     {
       "sha": "3778c3f69c912f9453326dbe59fdda3577512e8b",
       "short": "3778c3f",
@@ -16,14 +121,14 @@
       "date": "2026-06-01T03:45:34Z",
       "timestamp": 1780285534,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "origin/chore/update-submodules-20260601-034534",
+      "refs": "",
       "position": {
-        "x": 600,
-        "y": 60,
-        "lane": 0,
+        "x": 480,
+        "y": 300,
+        "lane": -1,
         "radius": 6,
-        "depth": 0,
-        "is_trunk": true,
+        "depth": 5,
+        "is_trunk": false,
         "is_merge": false,
         "is_fork": false
       }
@@ -37,16 +142,16 @@
       "date": "2026-05-25T03:34:08Z",
       "timestamp": 1779680048,
       "subject": "chore: update git tree visualisation",
-      "refs": "HEAD -> main, origin/main",
+      "refs": "",
       "position": {
         "x": 600,
-        "y": 100,
+        "y": 380,
         "lane": 0,
-        "radius": 6,
-        "depth": 1,
+        "radius": 9,
+        "depth": 6,
         "is_trunk": true,
         "is_merge": false,
-        "is_fork": false
+        "is_fork": true
       }
     },
     {
@@ -61,10 +166,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 140,
+        "y": 420,
         "lane": 0,
         "radius": 10,
-        "depth": 2,
+        "depth": 7,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -82,10 +187,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 180,
+        "y": 460,
         "lane": 0,
         "radius": 6,
-        "depth": 3,
+        "depth": 8,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -102,11 +207,11 @@
       "subject": "chore: update 1 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 720,
-        "y": 220,
-        "lane": 1,
+        "x": 840,
+        "y": 500,
+        "lane": 2,
         "radius": 6,
-        "depth": 4,
+        "depth": 9,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -124,10 +229,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 300,
+        "y": 580,
         "lane": 0,
         "radius": 10,
-        "depth": 5,
+        "depth": 10,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -144,11 +249,11 @@
       "subject": "chore: update 3 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 480,
-        "y": 340,
-        "lane": -1,
+        "x": 360,
+        "y": 620,
+        "lane": -2,
         "radius": 6,
-        "depth": 6,
+        "depth": 11,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -166,10 +271,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 420,
+        "y": 700,
         "lane": 0,
         "radius": 10,
-        "depth": 7,
+        "depth": 12,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -186,11 +291,11 @@
       "subject": "chore: update 1 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 840,
-        "y": 460,
-        "lane": 2,
+        "x": 960,
+        "y": 740,
+        "lane": 3,
         "radius": 6,
-        "depth": 8,
+        "depth": 13,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -208,10 +313,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 540,
+        "y": 820,
         "lane": 0,
         "radius": 9,
-        "depth": 9,
+        "depth": 14,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -229,10 +334,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 580,
+        "y": 860,
         "lane": 0,
         "radius": 6,
-        "depth": 10,
+        "depth": 15,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -250,10 +355,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 620,
+        "y": 900,
         "lane": 0,
         "radius": 10,
-        "depth": 11,
+        "depth": 16,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -271,10 +376,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 660,
+        "y": 940,
         "lane": 0,
         "radius": 6,
-        "depth": 12,
+        "depth": 17,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -291,11 +396,11 @@
       "subject": "chore: update 1 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 360,
-        "y": 700,
-        "lane": -2,
+        "x": 240,
+        "y": 980,
+        "lane": -3,
         "radius": 6,
-        "depth": 13,
+        "depth": 18,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -313,10 +418,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 780,
+        "y": 1060,
         "lane": 0,
         "radius": 10,
-        "depth": 14,
+        "depth": 19,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -334,10 +439,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 820,
+        "y": 1100,
         "lane": 0,
         "radius": 6,
-        "depth": 15,
+        "depth": 20,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -354,11 +459,11 @@
       "subject": "chore: update 3 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 960,
-        "y": 860,
-        "lane": 3,
+        "x": 1080,
+        "y": 1140,
+        "lane": 4,
         "radius": 6,
-        "depth": 16,
+        "depth": 21,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -376,10 +481,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 940,
+        "y": 1220,
         "lane": 0,
         "radius": 9,
-        "depth": 17,
+        "depth": 22,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -397,10 +502,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 980,
+        "y": 1260,
         "lane": 0,
         "radius": 6,
-        "depth": 18,
+        "depth": 23,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -418,10 +523,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1020,
+        "y": 1300,
         "lane": 0,
         "radius": 6,
-        "depth": 19,
+        "depth": 24,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -439,10 +544,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1060,
+        "y": 1340,
         "lane": 0,
         "radius": 6,
-        "depth": 20,
+        "depth": 25,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -460,10 +565,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1100,
+        "y": 1380,
         "lane": 0,
         "radius": 10,
-        "depth": 21,
+        "depth": 26,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -480,11 +585,11 @@
       "subject": "chore: update 5 submodule(s) to latest",
       "refs": "",
       "position": {
-        "x": 240,
-        "y": 1140,
-        "lane": -3,
+        "x": 120,
+        "y": 1420,
+        "lane": -4,
         "radius": 6,
-        "depth": 22,
+        "depth": 27,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -502,10 +607,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1220,
+        "y": 1500,
         "lane": 0,
         "radius": 9,
-        "depth": 23,
+        "depth": 28,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -522,11 +627,11 @@
       "subject": "chore: update 5 submodule(s) to latest",
       "refs": "origin/chore/update-submodules-20260314-201347",
       "position": {
-        "x": 1080,
-        "y": 1260,
-        "lane": 4,
+        "x": 1200,
+        "y": 1540,
+        "lane": 5,
         "radius": 6,
-        "depth": 24,
+        "depth": 29,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -543,11 +648,11 @@
       "subject": "chore(dc-init): update workflows/actions",
       "refs": "",
       "position": {
-        "x": 120,
-        "y": 1340,
-        "lane": -4,
+        "x": 0,
+        "y": 1620,
+        "lane": -5,
         "radius": 6,
-        "depth": 25,
+        "depth": 30,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -564,11 +669,11 @@
       "subject": "chore: update 5 submodule(s) to latest",
       "refs": "origin/chore/update-submodules-20260314-201007",
       "position": {
-        "x": 1200,
-        "y": 1420,
-        "lane": 5,
+        "x": 1320,
+        "y": 1700,
+        "lane": 6,
         "radius": 6,
-        "depth": 26,
+        "depth": 31,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -585,11 +690,11 @@
       "subject": "chore(dc-init): update workflows/actions",
       "refs": "",
       "position": {
-        "x": 0,
-        "y": 1500,
-        "lane": -5,
+        "x": -120,
+        "y": 1780,
+        "lane": -6,
         "radius": 6,
-        "depth": 27,
+        "depth": 32,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -607,10 +712,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1580,
+        "y": 1860,
         "lane": 0,
         "radius": 9,
-        "depth": 28,
+        "depth": 33,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -628,10 +733,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1620,
+        "y": 1900,
         "lane": 0,
         "radius": 10,
-        "depth": 29,
+        "depth": 34,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -648,11 +753,11 @@
       "subject": "chore: convert American spellings to British English",
       "refs": "",
       "position": {
-        "x": 1320,
-        "y": 1660,
-        "lane": 6,
+        "x": 1440,
+        "y": 1940,
+        "lane": 7,
         "radius": 6,
-        "depth": 30,
+        "depth": 35,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -669,11 +774,11 @@
       "subject": "chore: convert American spellings to British English",
       "refs": "origin/anglicise/20260306-021256",
       "position": {
-        "x": -120,
-        "y": 1740,
-        "lane": -6,
+        "x": -240,
+        "y": 2020,
+        "lane": -7,
         "radius": 6,
-        "depth": 31,
+        "depth": 36,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -690,11 +795,11 @@
       "subject": "chore: dc-init 2",
       "refs": "",
       "position": {
-        "x": 1440,
-        "y": 1820,
-        "lane": 7,
+        "x": 1560,
+        "y": 2100,
+        "lane": 8,
         "radius": 6,
-        "depth": 32,
+        "depth": 37,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -712,10 +817,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1900,
+        "y": 2180,
         "lane": 0,
         "radius": 9,
-        "depth": 33,
+        "depth": 38,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -733,10 +838,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1940,
+        "y": 2220,
         "lane": 0,
         "radius": 9,
-        "depth": 34,
+        "depth": 39,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -754,10 +859,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1980,
+        "y": 2260,
         "lane": 0,
         "radius": 10,
-        "depth": 35,
+        "depth": 40,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -774,11 +879,11 @@
       "subject": "chore: convert American spellings to British English",
       "refs": "",
       "position": {
-        "x": -240,
-        "y": 2020,
-        "lane": -7,
+        "x": -360,
+        "y": 2300,
+        "lane": -8,
         "radius": 6,
-        "depth": 36,
+        "depth": 41,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -796,10 +901,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2100,
+        "y": 2380,
         "lane": 0,
         "radius": 9,
-        "depth": 37,
+        "depth": 42,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -817,10 +922,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2140,
+        "y": 2420,
         "lane": 0,
         "radius": 6,
-        "depth": 38,
+        "depth": 43,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -838,10 +943,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2180,
+        "y": 2460,
         "lane": 0,
         "radius": 6,
-        "depth": 39,
+        "depth": 44,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -859,10 +964,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2220,
+        "y": 2500,
         "lane": 0,
         "radius": 6,
-        "depth": 40,
+        "depth": 45,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -880,10 +985,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2260,
+        "y": 2540,
         "lane": 0,
         "radius": 6,
-        "depth": 41,
+        "depth": 46,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -892,7 +997,7 @@
   ],
   "branches": [
     {
-      "name": "23a5d31a3d195c1b8c287c5841c79b3b139b30da chore: update git tree visualisation",
+      "name": "285b2ab03552fab072b53ed6824bbfe8d2d2b0f0 Merge pull request #11 from XAOSTECH:chore/update-submodules-20260608-034231",
       "sha": "*",
       "current": false,
       "merged": false
