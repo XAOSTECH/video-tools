@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="300" height="392"
-     viewBox="-500 40 2200 2880">
+     width="300" height="393"
+     viewBox="-500 40 2320 3040">
   <style>
     @keyframes sway {
       0%   { transform: translateX(0); }
@@ -17,122 +17,129 @@
   <g class="mini-node">
     <line class="mini-line" stroke="#4ade80" x1="600" y1="60" x2="600" y2="100"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="100" x2="600" y2="140"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="140" x2="600" y2="180"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 140 C 600 172, 720 188, 720 220"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="180" x2="600" y2="300"/>
-    <path class="mini-line" stroke="#64748b" d="M 720 220 C 720 252, 600 268, 600 300"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 100 C 600 132, 720 148, 720 180"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="140" x2="600" y2="260"/>
+    <path class="mini-line" stroke="#64748b" d="M 720 180 C 720 212, 600 228, 600 260"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="260" x2="600" y2="300"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="300" x2="600" y2="340"/>
     <path class="mini-line" stroke="#64748b" d="M 600 300 C 600 332, 480 348, 480 380"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="340" x2="600" y2="460"/>
     <path class="mini-line" stroke="#64748b" d="M 480 380 C 480 412, 600 428, 600 460"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="460" x2="600" y2="580"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 460 C 600 476, 840 484, 840 500"/>
-    <path class="mini-line" stroke="#64748b" d="M 840 500 C 840 532, 600 548, 600 580"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="580" x2="600" y2="620"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 580 C 600 612, 360 628, 360 660"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="460" x2="600" y2="500"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 460 C 600 492, 840 508, 840 540"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="500" x2="600" y2="620"/>
+    <path class="mini-line" stroke="#64748b" d="M 840 540 C 840 572, 600 588, 600 620"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="620" x2="600" y2="740"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 620 C 600 636, 360 644, 360 660"/>
     <path class="mini-line" stroke="#64748b" d="M 360 660 C 360 692, 600 708, 600 740"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="740" x2="600" y2="780"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="780" x2="600" y2="820"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 780 C 600 812, 960 828, 960 860"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="820" x2="600" y2="940"/>
-    <path class="mini-line" stroke="#64748b" d="M 960 860 C 960 892, 600 908, 600 940"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="940" x2="600" y2="1060"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 940 C 600 956, 240 964, 240 980"/>
-    <path class="mini-line" stroke="#64748b" d="M 240 980 C 240 1012, 600 1028, 600 1060"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1060" x2="600" y2="1180"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 1060 C 600 1076, 1080 1084, 1080 1100"/>
-    <path class="mini-line" stroke="#64748b" d="M 1080 1100 C 1080 1132, 600 1148, 600 1180"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1180" x2="600" y2="1220"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1220" x2="600" y2="1260"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1260" x2="600" y2="1300"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 1260 C 600 1292, 120 1308, 120 1340"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1300" x2="600" y2="1420"/>
-    <path class="mini-line" stroke="#64748b" d="M 120 1340 C 120 1372, 600 1388, 600 1420"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 740 C 600 772, 960 788, 960 820"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="780" x2="600" y2="900"/>
+    <path class="mini-line" stroke="#64748b" d="M 960 820 C 960 852, 600 868, 600 900"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="900" x2="600" y2="940"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="940" x2="600" y2="980"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 940 C 600 972, 240 988, 240 1020"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="980" x2="600" y2="1100"/>
+    <path class="mini-line" stroke="#64748b" d="M 240 1020 C 240 1052, 600 1068, 600 1100"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1100" x2="600" y2="1220"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 1100 C 600 1116, 1080 1124, 1080 1140"/>
+    <path class="mini-line" stroke="#64748b" d="M 1080 1140 C 1080 1172, 600 1188, 600 1220"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1220" x2="600" y2="1340"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 1220 C 600 1236, 120 1244, 120 1260"/>
+    <path class="mini-line" stroke="#64748b" d="M 120 1260 C 120 1292, 600 1308, 600 1340"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1340" x2="600" y2="1380"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1380" x2="600" y2="1420"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="1420" x2="600" y2="1460"/>
     <path class="mini-line" stroke="#64748b" d="M 600 1420 C 600 1452, 1200 1468, 1200 1500"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="1460" x2="600" y2="1580"/>
     <path class="mini-line" stroke="#64748b" d="M 1200 1500 C 1200 1532, 600 1548, 600 1580"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="1580" x2="600" y2="1620"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1620" x2="600" y2="1660"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1660" x2="600" y2="1700"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1700" x2="600" y2="1740"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1740" x2="600" y2="1860"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 1740 C 600 1756, 0 1764, 0 1780"/>
-    <path class="mini-line" stroke="#64748b" d="M 0 1780 C 0 1812, 600 1828, 600 1860"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="1860" x2="600" y2="2220"/>
-    <path class="mini-line" stroke="#64748b" d="M 1320 1900 C 1320 1932, -120 1948, -120 1980"/>
-    <path class="mini-line" stroke="#64748b" d="M -120 1980 C -120 2076, 600 2124, 600 2220"/>
-    <path class="mini-line" stroke="#64748b" d="M 1440 2060 C 1440 2092, -240 2108, -240 2140"/>
-    <path class="mini-line" stroke="#64748b" d="M -240 2140 C -240 2172, 600 2188, 600 2220"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2220" x2="600" y2="2260"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2260" x2="600" y2="2540"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 2260 C 600 2276, 1560 2284, 1560 2300"/>
-    <path class="mini-line" stroke="#64748b" d="M 1560 2300 C 1560 2396, 600 2444, 600 2540"/>
-    <path class="mini-line" stroke="#64748b" d="M -360 2380 C -360 2412, 1680 2428, 1680 2460"/>
-    <path class="mini-line" stroke="#64748b" d="M 1680 2460 C 1680 2508, 600 2532, 600 2580"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2540" x2="600" y2="2580"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2580" x2="600" y2="2620"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2620" x2="600" y2="2740"/>
-    <path class="mini-line" stroke="#64748b" d="M 600 2620 C 600 2636, -480 2644, -480 2660"/>
-    <path class="mini-line" stroke="#64748b" d="M -480 2660 C -480 2692, 600 2708, 600 2740"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 1580 C 600 1612, 0 1628, 0 1660"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1620" x2="600" y2="1740"/>
+    <path class="mini-line" stroke="#64748b" d="M 0 1660 C 0 1692, 600 1708, 600 1740"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1740" x2="600" y2="1780"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1780" x2="600" y2="1820"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1820" x2="600" y2="1860"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1860" x2="600" y2="1900"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="1900" x2="600" y2="2020"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 1900 C 600 1916, 1320 1924, 1320 1940"/>
+    <path class="mini-line" stroke="#64748b" d="M 1320 1940 C 1320 1972, 600 1988, 600 2020"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2020" x2="600" y2="2380"/>
+    <path class="mini-line" stroke="#64748b" d="M -120 2060 C -120 2092, 1440 2108, 1440 2140"/>
+    <path class="mini-line" stroke="#64748b" d="M 1440 2140 C 1440 2236, 600 2284, 600 2380"/>
+    <path class="mini-line" stroke="#64748b" d="M -240 2220 C -240 2252, 1560 2268, 1560 2300"/>
+    <path class="mini-line" stroke="#64748b" d="M 1560 2300 C 1560 2332, 600 2348, 600 2380"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2380" x2="600" y2="2420"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2420" x2="600" y2="2700"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 2420 C 600 2436, -360 2444, -360 2460"/>
+    <path class="mini-line" stroke="#64748b" d="M -360 2460 C -360 2556, 600 2604, 600 2700"/>
+    <path class="mini-line" stroke="#64748b" d="M 1680 2540 C 1680 2572, -480 2588, -480 2620"/>
+    <path class="mini-line" stroke="#64748b" d="M -480 2620 C -480 2668, 600 2692, 600 2740"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2700" x2="600" y2="2740"/>
     <line class="mini-line" stroke="#4ade80" x1="600" y1="2740" x2="600" y2="2780"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2780" x2="600" y2="2820"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2820" x2="600" y2="2860"/>
-    <line class="mini-line" stroke="#4ade80" x1="600" y1="2860" x2="600" y2="2900"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2780" x2="600" y2="2900"/>
+    <path class="mini-line" stroke="#64748b" d="M 600 2780 C 600 2796, 1800 2804, 1800 2820"/>
+    <path class="mini-line" stroke="#64748b" d="M 1800 2820 C 1800 2852, 600 2868, 600 2900"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2900" x2="600" y2="2940"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2940" x2="600" y2="2980"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="2980" x2="600" y2="3020"/>
+    <line class="mini-line" stroke="#4ade80" x1="600" y1="3020" x2="600" y2="3060"/>
     <circle cx="600" cy="60" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="100" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="140" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="600" cy="180" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="720" cy="220" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="100" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="600" cy="140" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="720" cy="180" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="260" r="6" fill="#fb923c" opacity="0.9"/>
     <circle cx="600" cy="300" r="7" fill="#c084fc" opacity="0.9"/>
     <circle cx="600" cy="340" r="4" fill="#4ade80" opacity="0.9"/>
     <circle cx="480" cy="380" r="4" fill="#4ade80" opacity="0.9"/>
     <circle cx="600" cy="460" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="840" cy="500" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="580" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="600" cy="620" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="500" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="840" cy="540" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="620" r="7" fill="#c084fc" opacity="0.9"/>
     <circle cx="360" cy="660" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="740" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="780" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="600" cy="820" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="960" cy="860" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="740" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="600" cy="780" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="960" cy="820" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="900" r="6" fill="#fb923c" opacity="0.9"/>
     <circle cx="600" cy="940" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="240" cy="980" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1060" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="1080" cy="1100" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1180" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="1220" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1260" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="600" cy="1300" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="120" cy="1340" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="980" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="240" cy="1020" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1100" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="1080" cy="1140" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1220" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="120" cy="1260" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1340" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="600" cy="1380" r="4" fill="#4ade80" opacity="0.9"/>
     <circle cx="600" cy="1420" r="7" fill="#c084fc" opacity="0.9"/>
     <circle cx="600" cy="1460" r="4" fill="#4ade80" opacity="0.9"/>
     <circle cx="1200" cy="1500" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1580" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="600" cy="1580" r="7" fill="#c084fc" opacity="0.9"/>
     <circle cx="600" cy="1620" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1660" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1700" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1740" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="0" cy="1780" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="1860" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="1320" cy="1900" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="-120" cy="1980" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="1440" cy="2060" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="-240" cy="2140" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="2220" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="2260" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="0" cy="1660" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1740" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="600" cy="1780" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1820" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1860" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="1900" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="1320" cy="1940" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2020" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="-120" cy="2060" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="1440" cy="2140" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="-240" cy="2220" r="4" fill="#4ade80" opacity="0.9"/>
     <circle cx="1560" cy="2300" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="-360" cy="2380" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="1680" cy="2460" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="2540" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="2580" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="2620" r="7" fill="#c084fc" opacity="0.9"/>
-    <circle cx="-480" cy="2660" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2380" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="600" cy="2420" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="-360" cy="2460" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="1680" cy="2540" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="-480" cy="2620" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2700" r="6" fill="#fb923c" opacity="0.9"/>
     <circle cx="600" cy="2740" r="6" fill="#fb923c" opacity="0.9"/>
-    <circle cx="600" cy="2780" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="2820" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="2860" r="4" fill="#4ade80" opacity="0.9"/>
-    <circle cx="600" cy="2900" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2780" r="7" fill="#c084fc" opacity="0.9"/>
+    <circle cx="1800" cy="2820" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2900" r="6" fill="#fb923c" opacity="0.9"/>
+    <circle cx="600" cy="2940" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="2980" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="3020" r="4" fill="#4ade80" opacity="0.9"/>
+    <circle cx="600" cy="3060" r="4" fill="#4ade80" opacity="0.9"/>
   </g>
 </svg>
