@@ -3,10 +3,43 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-07-06T02:55:12Z",
+    "generated": "2026-07-13T02:31:15Z",
     "max_commits": 500
   },
   "commits": [
+  {
+    "sha": "8b057e4aba7f8efc17e932f9581aacf9a9710212",
+    "short": "8b057e4",
+    "parents": "3544203f325e8d2a75a13311fea20261d8b01361",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-07-13T02:30:49Z",
+    "timestamp": 1783909849,
+    "subject": "chore: update 1 submodule(s) to latest",
+    "refs": "origin/chore/update-submodules-20260713-023049"
+  },
+  {
+    "sha": "3544203f325e8d2a75a13311fea20261d8b01361",
+    "short": "3544203",
+    "parents": "8f28da8c17e7e642d57e5c6d485e0a0459ab67bd fa4d5e391e62550b15861969c9ac7e303c7345f9",
+    "author": "xaostech[bot]",
+    "email": "260314499+xaostech[bot]@users.noreply.github.com",
+    "date": "2026-07-06T02:55:16Z",
+    "timestamp": 1783306516,
+    "subject": "Merge pull request #14 from XAOSTECH:chore/update-submodules-20260706-025446",
+    "refs": "HEAD -> main, origin/main"
+  },
+  {
+    "sha": "8f28da8c17e7e642d57e5c6d485e0a0459ab67bd",
+    "short": "8f28da8",
+    "parents": "4e020975e6ddb8960ea082bc9d4f70c6f3019b7b",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-07-06T02:55:12Z",
+    "timestamp": 1783306512,
+    "subject": "chore: update git tree visualisation",
+    "refs": ""
+  },
   {
     "sha": "fa4d5e391e62550b15861969c9ac7e303c7345f9",
     "short": "fa4d5e3",
@@ -16,7 +49,7 @@
     "date": "2026-07-06T02:54:46Z",
     "timestamp": 1783306486,
     "subject": "chore: update 2 submodule(s) to latest",
-    "refs": "origin/chore/update-submodules-20260706-025446"
+    "refs": ""
   },
   {
     "sha": "4e020975e6ddb8960ea082bc9d4f70c6f3019b7b",
@@ -27,7 +60,7 @@
     "date": "2026-06-29T03:38:00Z",
     "timestamp": 1782704280,
     "subject": "chore: update git tree visualisation",
-    "refs": "HEAD -> main, origin/main"
+    "refs": ""
   },
   {
     "sha": "d8cb79c6b60934c4a1497f2691094540ac893900",
@@ -603,7 +636,7 @@
   }
 ],
   "branches": [
-  {"name":"4e020975e6ddb8960ea082bc9d4f70c6f3019b7b chore: update git tree visualisation","sha":"*","current":false,"merged":false}
+  {"name":"3544203f325e8d2a75a13311fea20261d8b01361 Merge pull request #14 from XAOSTECH:chore/update-submodules-20260706-025446","sha":"*","current":false,"merged":false}
 ],
   "tags": [
 
