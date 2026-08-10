@@ -3,10 +3,52 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-08-03T02:32:36Z",
+    "generated": "2026-08-10T01:26:33Z",
     "max_commits": 500
   },
   "commits": [
+    {
+      "sha": "76602cc492ea1419b32c22a69d28915ad8100acf",
+      "short": "76602cc",
+      "parents": "ad55335c3dc248a76002491628e5f8e0698a69ec",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-08-10T01:26:06Z",
+      "timestamp": 1786325166,
+      "subject": "chore: update 2 submodule(s) to latest",
+      "refs": "origin/chore/update-submodules-20260810-012605",
+      "position": {
+        "x": 600,
+        "y": 60,
+        "lane": 0,
+        "radius": 6,
+        "depth": 0,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
+    {
+      "sha": "ad55335c3dc248a76002491628e5f8e0698a69ec",
+      "short": "ad55335",
+      "parents": "da0f523d7411f0fdd5ef249a1756ff58935c37fe",
+      "author": "xaos-bot",
+      "email": "262248812+xaos-bot@users.noreply.github.com",
+      "date": "2026-08-03T02:32:36Z",
+      "timestamp": 1785724356,
+      "subject": "chore: update git tree visualisation",
+      "refs": "HEAD -> main, origin/main",
+      "position": {
+        "x": 600,
+        "y": 100,
+        "lane": 0,
+        "radius": 6,
+        "depth": 1,
+        "is_trunk": true,
+        "is_merge": false,
+        "is_fork": false
+      }
+    },
     {
       "sha": "da0f523d7411f0fdd5ef249a1756ff58935c37fe",
       "short": "da0f523",
@@ -16,13 +58,13 @@
       "date": "2026-07-27T02:39:01Z",
       "timestamp": 1785119941,
       "subject": "chore: update git tree visualisation",
-      "refs": "HEAD -> main, origin/main",
+      "refs": "",
       "position": {
         "x": 600,
-        "y": 60,
+        "y": 140,
         "lane": 0,
         "radius": 6,
-        "depth": 0,
+        "depth": 2,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -40,10 +82,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 100,
+        "y": 180,
         "lane": 0,
         "radius": 10,
-        "depth": 1,
+        "depth": 3,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -61,10 +103,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 140,
+        "y": 220,
         "lane": 0,
         "radius": 6,
-        "depth": 2,
+        "depth": 4,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -82,10 +124,10 @@
       "refs": "",
       "position": {
         "x": 720,
-        "y": 180,
+        "y": 260,
         "lane": 1,
         "radius": 6,
-        "depth": 3,
+        "depth": 5,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -103,10 +145,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 260,
+        "y": 340,
         "lane": 0,
         "radius": 10,
-        "depth": 4,
+        "depth": 6,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -124,10 +166,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 300,
+        "y": 380,
         "lane": 0,
         "radius": 6,
-        "depth": 5,
+        "depth": 7,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -145,10 +187,10 @@
       "refs": "",
       "position": {
         "x": 480,
-        "y": 340,
+        "y": 420,
         "lane": -1,
         "radius": 6,
-        "depth": 6,
+        "depth": 8,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -166,10 +208,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 420,
+        "y": 500,
         "lane": 0,
         "radius": 10,
-        "depth": 7,
+        "depth": 9,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -187,10 +229,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 460,
+        "y": 540,
         "lane": 0,
         "radius": 6,
-        "depth": 8,
+        "depth": 10,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -208,10 +250,10 @@
       "refs": "",
       "position": {
         "x": 840,
-        "y": 500,
+        "y": 580,
         "lane": 2,
         "radius": 6,
-        "depth": 9,
+        "depth": 11,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -229,10 +271,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 580,
+        "y": 660,
         "lane": 0,
         "radius": 9,
-        "depth": 10,
+        "depth": 12,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -250,10 +292,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 620,
+        "y": 700,
         "lane": 0,
         "radius": 10,
-        "depth": 11,
+        "depth": 13,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -271,10 +313,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 660,
+        "y": 740,
         "lane": 0,
         "radius": 6,
-        "depth": 12,
+        "depth": 14,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -292,10 +334,10 @@
       "refs": "",
       "position": {
         "x": 360,
-        "y": 700,
+        "y": 780,
         "lane": -2,
         "radius": 6,
-        "depth": 13,
+        "depth": 15,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -313,10 +355,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 780,
+        "y": 860,
         "lane": 0,
         "radius": 10,
-        "depth": 14,
+        "depth": 16,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -334,10 +376,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 820,
+        "y": 900,
         "lane": 0,
         "radius": 6,
-        "depth": 15,
+        "depth": 17,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -355,10 +397,10 @@
       "refs": "",
       "position": {
         "x": 960,
-        "y": 860,
+        "y": 940,
         "lane": 3,
         "radius": 6,
-        "depth": 16,
+        "depth": 18,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -376,10 +418,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 940,
+        "y": 1020,
         "lane": 0,
         "radius": 10,
-        "depth": 17,
+        "depth": 19,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -397,10 +439,10 @@
       "refs": "",
       "position": {
         "x": 240,
-        "y": 980,
+        "y": 1060,
         "lane": -3,
         "radius": 6,
-        "depth": 18,
+        "depth": 20,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -418,10 +460,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1060,
+        "y": 1140,
         "lane": 0,
         "radius": 10,
-        "depth": 19,
+        "depth": 21,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -439,10 +481,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1100,
+        "y": 1180,
         "lane": 0,
         "radius": 6,
-        "depth": 20,
+        "depth": 22,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -460,10 +502,10 @@
       "refs": "",
       "position": {
         "x": 1080,
-        "y": 1140,
+        "y": 1220,
         "lane": 4,
         "radius": 6,
-        "depth": 21,
+        "depth": 23,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -481,10 +523,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1220,
+        "y": 1300,
         "lane": 0,
         "radius": 9,
-        "depth": 22,
+        "depth": 24,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -502,10 +544,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1260,
+        "y": 1340,
         "lane": 0,
         "radius": 10,
-        "depth": 23,
+        "depth": 25,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -523,10 +565,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1300,
+        "y": 1380,
         "lane": 0,
         "radius": 6,
-        "depth": 24,
+        "depth": 26,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -544,10 +586,10 @@
       "refs": "",
       "position": {
         "x": 120,
-        "y": 1340,
+        "y": 1420,
         "lane": -4,
         "radius": 6,
-        "depth": 25,
+        "depth": 27,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -565,10 +607,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1420,
+        "y": 1500,
         "lane": 0,
         "radius": 10,
-        "depth": 26,
+        "depth": 28,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -586,10 +628,10 @@
       "refs": "",
       "position": {
         "x": 1200,
-        "y": 1460,
+        "y": 1540,
         "lane": 5,
         "radius": 6,
-        "depth": 27,
+        "depth": 29,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -607,10 +649,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1540,
+        "y": 1620,
         "lane": 0,
         "radius": 10,
-        "depth": 28,
+        "depth": 30,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -628,10 +670,10 @@
       "refs": "",
       "position": {
         "x": 0,
-        "y": 1580,
+        "y": 1660,
         "lane": -5,
         "radius": 6,
-        "depth": 29,
+        "depth": 31,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -649,10 +691,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1660,
+        "y": 1740,
         "lane": 0,
         "radius": 9,
-        "depth": 30,
+        "depth": 32,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -670,10 +712,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1700,
+        "y": 1780,
         "lane": 0,
         "radius": 6,
-        "depth": 31,
+        "depth": 33,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -691,10 +733,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1740,
+        "y": 1820,
         "lane": 0,
         "radius": 10,
-        "depth": 32,
+        "depth": 34,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -712,10 +754,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1780,
+        "y": 1860,
         "lane": 0,
         "radius": 6,
-        "depth": 33,
+        "depth": 35,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -733,10 +775,10 @@
       "refs": "",
       "position": {
         "x": 1320,
-        "y": 1820,
+        "y": 1900,
         "lane": 6,
         "radius": 6,
-        "depth": 34,
+        "depth": 36,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -754,10 +796,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1900,
+        "y": 1980,
         "lane": 0,
         "radius": 10,
-        "depth": 35,
+        "depth": 37,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": true
@@ -775,10 +817,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 1940,
+        "y": 2020,
         "lane": 0,
         "radius": 6,
-        "depth": 36,
+        "depth": 38,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -796,10 +838,10 @@
       "refs": "",
       "position": {
         "x": -120,
-        "y": 1980,
+        "y": 2060,
         "lane": -6,
         "radius": 6,
-        "depth": 37,
+        "depth": 39,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -817,10 +859,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2060,
+        "y": 2140,
         "lane": 0,
         "radius": 9,
-        "depth": 38,
+        "depth": 40,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -838,10 +880,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2100,
+        "y": 2180,
         "lane": 0,
         "radius": 6,
-        "depth": 39,
+        "depth": 41,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -859,10 +901,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2140,
+        "y": 2220,
         "lane": 0,
         "radius": 6,
-        "depth": 40,
+        "depth": 42,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -880,10 +922,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2180,
+        "y": 2260,
         "lane": 0,
         "radius": 6,
-        "depth": 41,
+        "depth": 43,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -901,10 +943,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2220,
+        "y": 2300,
         "lane": 0,
         "radius": 10,
-        "depth": 42,
+        "depth": 44,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -922,10 +964,10 @@
       "refs": "",
       "position": {
         "x": 1440,
-        "y": 2260,
+        "y": 2340,
         "lane": 7,
         "radius": 6,
-        "depth": 43,
+        "depth": 45,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -943,10 +985,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2340,
+        "y": 2420,
         "lane": 0,
         "radius": 9,
-        "depth": 44,
+        "depth": 46,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -964,10 +1006,10 @@
       "refs": "origin/chore/update-submodules-20260314-201347",
       "position": {
         "x": -240,
-        "y": 2380,
+        "y": 2460,
         "lane": -7,
         "radius": 6,
-        "depth": 45,
+        "depth": 47,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -985,10 +1027,10 @@
       "refs": "",
       "position": {
         "x": 1560,
-        "y": 2460,
+        "y": 2540,
         "lane": 8,
         "radius": 6,
-        "depth": 46,
+        "depth": 48,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1006,10 +1048,10 @@
       "refs": "origin/chore/update-submodules-20260314-201007",
       "position": {
         "x": -360,
-        "y": 2540,
+        "y": 2620,
         "lane": -8,
         "radius": 6,
-        "depth": 47,
+        "depth": 49,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1027,10 +1069,10 @@
       "refs": "",
       "position": {
         "x": 1680,
-        "y": 2620,
+        "y": 2700,
         "lane": 9,
         "radius": 6,
-        "depth": 48,
+        "depth": 50,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1048,10 +1090,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2700,
+        "y": 2780,
         "lane": 0,
         "radius": 9,
-        "depth": 49,
+        "depth": 51,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -1069,10 +1111,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 2740,
+        "y": 2820,
         "lane": 0,
         "radius": 10,
-        "depth": 50,
+        "depth": 52,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -1090,10 +1132,10 @@
       "refs": "",
       "position": {
         "x": -480,
-        "y": 2780,
+        "y": 2860,
         "lane": -9,
         "radius": 6,
-        "depth": 51,
+        "depth": 53,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1111,10 +1153,10 @@
       "refs": "origin/anglicise/20260306-021256",
       "position": {
         "x": 1800,
-        "y": 2860,
+        "y": 2940,
         "lane": 10,
         "radius": 6,
-        "depth": 52,
+        "depth": 54,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1132,10 +1174,10 @@
       "refs": "",
       "position": {
         "x": -600,
-        "y": 2940,
+        "y": 3020,
         "lane": -10,
         "radius": 6,
-        "depth": 53,
+        "depth": 55,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1153,10 +1195,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3020,
+        "y": 3100,
         "lane": 0,
         "radius": 9,
-        "depth": 54,
+        "depth": 56,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -1174,10 +1216,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3060,
+        "y": 3140,
         "lane": 0,
         "radius": 9,
-        "depth": 55,
+        "depth": 57,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -1195,10 +1237,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3100,
+        "y": 3180,
         "lane": 0,
         "radius": 10,
-        "depth": 56,
+        "depth": 58,
         "is_trunk": true,
         "is_merge": true,
         "is_fork": false
@@ -1216,10 +1258,10 @@
       "refs": "",
       "position": {
         "x": 1920,
-        "y": 3140,
+        "y": 3220,
         "lane": 11,
         "radius": 6,
-        "depth": 57,
+        "depth": 59,
         "is_trunk": false,
         "is_merge": false,
         "is_fork": false
@@ -1237,10 +1279,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3220,
+        "y": 3300,
         "lane": 0,
         "radius": 9,
-        "depth": 58,
+        "depth": 60,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": true
@@ -1258,10 +1300,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3260,
+        "y": 3340,
         "lane": 0,
         "radius": 6,
-        "depth": 59,
+        "depth": 61,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -1279,10 +1321,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3300,
+        "y": 3380,
         "lane": 0,
         "radius": 6,
-        "depth": 60,
+        "depth": 62,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -1300,10 +1342,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3340,
+        "y": 3420,
         "lane": 0,
         "radius": 6,
-        "depth": 61,
+        "depth": 63,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -1321,10 +1363,10 @@
       "refs": "",
       "position": {
         "x": 600,
-        "y": 3380,
+        "y": 3460,
         "lane": 0,
         "radius": 6,
-        "depth": 62,
+        "depth": 64,
         "is_trunk": true,
         "is_merge": false,
         "is_fork": false
@@ -1333,7 +1375,7 @@
   ],
   "branches": [
     {
-      "name": "da0f523d7411f0fdd5ef249a1756ff58935c37fe chore: update git tree visualisation",
+      "name": "ad55335c3dc248a76002491628e5f8e0698a69ec chore: update git tree visualisation",
       "sha": "*",
       "current": false,
       "merged": false
