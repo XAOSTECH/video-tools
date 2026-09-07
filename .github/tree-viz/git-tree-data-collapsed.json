@@ -16,17 +16,7 @@
       "date": "2026-09-07T02:47:32Z",
       "timestamp": 1788749252,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "origin/chore/update-submodules-20260907-024732",
-      "position": {
-        "x": 600,
-        "y": 60,
-        "lane": 0,
-        "radius": 6,
-        "depth": 0,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": "origin/chore/update-submodules-20260907-024732"
     },
     {
       "sha": "9627fb49525d64da24d6737d2d143338da725af6",
@@ -37,17 +27,7 @@
       "date": "2026-08-17T01:04:13Z",
       "timestamp": 1786928653,
       "subject": "Merge pull request #18 from XAOSTECH:chore/update-submodules-20260817-010338",
-      "refs": "HEAD -> main, origin/main",
-      "position": {
-        "x": 600,
-        "y": 100,
-        "lane": 0,
-        "radius": 10,
-        "depth": 1,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": "HEAD -> main, origin/main"
     },
     {
       "sha": "43dc4945f09a7cac57c0b7927e41e8c8893002da",
@@ -58,17 +38,7 @@
       "date": "2026-08-17T01:04:09Z",
       "timestamp": 1786928649,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 140,
-        "lane": 0,
-        "radius": 6,
-        "depth": 2,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "a6163970046d5022210b529fac6289ac58a90eb7",
@@ -79,17 +49,7 @@
       "date": "2026-08-17T01:03:38Z",
       "timestamp": 1786928618,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 720,
-        "y": 180,
-        "lane": 1,
-        "radius": 6,
-        "depth": 3,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "bedb993737f51b0168377223fef026c270863914",
@@ -100,17 +60,7 @@
       "date": "2026-08-10T01:26:38Z",
       "timestamp": 1786325198,
       "subject": "Merge pull request #17 from XAOSTECH:chore/update-submodules-20260810-012605",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 260,
-        "lane": 0,
-        "radius": 10,
-        "depth": 4,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "8d69b5d9f3ba6d9e03b47a7013b7e52f38fbe8ec",
@@ -121,17 +71,7 @@
       "date": "2026-08-10T01:26:33Z",
       "timestamp": 1786325193,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 300,
-        "lane": 0,
-        "radius": 6,
-        "depth": 5,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "76602cc492ea1419b32c22a69d28915ad8100acf",
@@ -142,17 +82,7 @@
       "date": "2026-08-10T01:26:06Z",
       "timestamp": 1786325166,
       "subject": "chore: update 2 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 480,
-        "y": 340,
-        "lane": -1,
-        "radius": 6,
-        "depth": 6,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "ad55335c3dc248a76002491628e5f8e0698a69ec",
@@ -163,17 +93,7 @@
       "date": "2026-08-03T02:32:36Z",
       "timestamp": 1785724356,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 420,
-        "lane": 0,
-        "radius": 9,
-        "depth": 7,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "da0f523d7411f0fdd5ef249a1756ff58935c37fe",
@@ -184,17 +104,7 @@
       "date": "2026-07-27T02:39:01Z",
       "timestamp": 1785119941,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 460,
-        "lane": 0,
-        "radius": 6,
-        "depth": 8,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "bbadd72ac329e1ee9db3073a420c9f990bca1148",
@@ -205,17 +115,7 @@
       "date": "2026-07-20T02:42:15Z",
       "timestamp": 1784515335,
       "subject": "Merge pull request #16 from XAOSTECH:chore/update-submodules-20260720-024141",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 500,
-        "lane": 0,
-        "radius": 10,
-        "depth": 9,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "1c4d885ca6df58cfa2b759e4194a1210f69e7ce7",
@@ -226,17 +126,7 @@
       "date": "2026-07-20T02:42:08Z",
       "timestamp": 1784515328,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 540,
-        "lane": 0,
-        "radius": 6,
-        "depth": 10,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "170bb0513022296bffd5831d8b515c33c95ee4eb",
@@ -247,17 +137,7 @@
       "date": "2026-07-20T02:41:41Z",
       "timestamp": 1784515301,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 840,
-        "y": 580,
-        "lane": 2,
-        "radius": 6,
-        "depth": 11,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "83e187197f86da1fb56a8078d7af542e4278c07e",
@@ -268,17 +148,7 @@
       "date": "2026-07-13T02:31:19Z",
       "timestamp": 1783909879,
       "subject": "Merge pull request #15 from XAOSTECH:chore/update-submodules-20260713-023049",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 660,
-        "lane": 0,
-        "radius": 10,
-        "depth": 12,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "202aac1394f00ba2e46b0b5a5922a15a1e868982",
@@ -289,17 +159,7 @@
       "date": "2026-07-13T02:31:15Z",
       "timestamp": 1783909875,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 700,
-        "lane": 0,
-        "radius": 6,
-        "depth": 13,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "8b057e4aba7f8efc17e932f9581aacf9a9710212",
@@ -310,17 +170,7 @@
       "date": "2026-07-13T02:30:49Z",
       "timestamp": 1783909849,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 360,
-        "y": 740,
-        "lane": -2,
-        "radius": 6,
-        "depth": 14,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "3544203f325e8d2a75a13311fea20261d8b01361",
@@ -331,17 +181,7 @@
       "date": "2026-07-06T02:55:16Z",
       "timestamp": 1783306516,
       "subject": "Merge pull request #14 from XAOSTECH:chore/update-submodules-20260706-025446",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 820,
-        "lane": 0,
-        "radius": 10,
-        "depth": 15,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "8f28da8c17e7e642d57e5c6d485e0a0459ab67bd",
@@ -352,17 +192,7 @@
       "date": "2026-07-06T02:55:12Z",
       "timestamp": 1783306512,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 860,
-        "lane": 0,
-        "radius": 6,
-        "depth": 16,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "fa4d5e391e62550b15861969c9ac7e303c7345f9",
@@ -373,17 +203,7 @@
       "date": "2026-07-06T02:54:46Z",
       "timestamp": 1783306486,
       "subject": "chore: update 2 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 960,
-        "y": 900,
-        "lane": 3,
-        "radius": 6,
-        "depth": 17,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "4e020975e6ddb8960ea082bc9d4f70c6f3019b7b",
@@ -394,17 +214,7 @@
       "date": "2026-06-29T03:38:00Z",
       "timestamp": 1782704280,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 980,
-        "lane": 0,
-        "radius": 9,
-        "depth": 18,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "d8cb79c6b60934c4a1497f2691094540ac893900",
@@ -415,17 +225,7 @@
       "date": "2026-06-22T03:57:38Z",
       "timestamp": 1782100658,
       "subject": "Merge pull request #13 from XAOSTECH:chore/update-submodules-20260622-035705",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1020,
-        "lane": 0,
-        "radius": 10,
-        "depth": 19,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "c808690c45917fd1f9a6bf8f51bd465c29857d76",
@@ -436,17 +236,7 @@
       "date": "2026-06-22T03:57:31Z",
       "timestamp": 1782100651,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1060,
-        "lane": 0,
-        "radius": 6,
-        "depth": 20,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "d37db1682ab91922f9612188247cc6c2b9ca9e07",
@@ -457,17 +247,7 @@
       "date": "2026-06-22T03:57:05Z",
       "timestamp": 1782100625,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 240,
-        "y": 1100,
-        "lane": -3,
-        "radius": 6,
-        "depth": 21,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "76991757ffc3297fdfb1d4e762c239ce45039220",
@@ -478,17 +258,7 @@
       "date": "2026-06-15T03:59:59Z",
       "timestamp": 1781495999,
       "subject": "Merge pull request #12 from XAOSTECH:chore/update-submodules-20260615-035924",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1180,
-        "lane": 0,
-        "radius": 10,
-        "depth": 22,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "9dee3c1949e129f60fb0096b0b66003dd358143c",
@@ -499,17 +269,7 @@
       "date": "2026-06-15T03:59:47Z",
       "timestamp": 1781495987,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1220,
-        "lane": 0,
-        "radius": 6,
-        "depth": 23,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "378da79e585ef6fda4b5eb6b95bd33af66b91688",
@@ -520,17 +280,7 @@
       "date": "2026-06-15T03:59:24Z",
       "timestamp": 1781495964,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 1080,
-        "y": 1260,
-        "lane": 4,
-        "radius": 6,
-        "depth": 24,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "285b2ab03552fab072b53ed6824bbfe8d2d2b0f0",
@@ -541,17 +291,7 @@
       "date": "2026-06-08T03:42:58Z",
       "timestamp": 1780890178,
       "subject": "Merge pull request #11 from XAOSTECH:chore/update-submodules-20260608-034231",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1340,
-        "lane": 0,
-        "radius": 10,
-        "depth": 25,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "b9a69e268c4bb55614f9c51d4be9ddca039a028e",
@@ -562,17 +302,7 @@
       "date": "2026-06-08T03:42:31Z",
       "timestamp": 1780890151,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 120,
-        "y": 1380,
-        "lane": -4,
-        "radius": 6,
-        "depth": 26,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "736db9da4c65a5b2f3b6b366095168a6252ce5cf",
@@ -583,17 +313,7 @@
       "date": "2026-06-01T03:46:06Z",
       "timestamp": 1780285566,
       "subject": "Merge pull request #10 from XAOSTECH:chore/update-submodules-20260601-034534",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1460,
-        "lane": 0,
-        "radius": 10,
-        "depth": 27,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "dc236037269428d6eee691f45dcebec019b8389c",
@@ -604,17 +324,7 @@
       "date": "2026-06-01T03:45:55Z",
       "timestamp": 1780285555,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1500,
-        "lane": 0,
-        "radius": 6,
-        "depth": 28,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "3778c3f69c912f9453326dbe59fdda3577512e8b",
@@ -625,17 +335,7 @@
       "date": "2026-06-01T03:45:34Z",
       "timestamp": 1780285534,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 1200,
-        "y": 1540,
-        "lane": 5,
-        "radius": 6,
-        "depth": 29,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "23a5d31a3d195c1b8c287c5841c79b3b139b30da",
@@ -646,17 +346,7 @@
       "date": "2026-05-25T03:34:08Z",
       "timestamp": 1779680048,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1620,
-        "lane": 0,
-        "radius": 9,
-        "depth": 30,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "09469278cd97ac10fcbbf7698f315ea628dd2d63",
@@ -667,17 +357,7 @@
       "date": "2026-05-18T03:27:27Z",
       "timestamp": 1779074847,
       "subject": "Merge pull request #9 from XAOSTECH:chore/update-submodules-20260518-032655",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1660,
-        "lane": 0,
-        "radius": 10,
-        "depth": 31,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "b4aab27a3c640ce522472f23bbc1bcbdede0e4c4",
@@ -688,17 +368,7 @@
       "date": "2026-05-18T03:27:22Z",
       "timestamp": 1779074842,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1700,
-        "lane": 0,
-        "radius": 6,
-        "depth": 32,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "e80ec01a9c29255502e928f0930ecbb76b23bb18",
@@ -709,17 +379,7 @@
       "date": "2026-05-18T03:26:55Z",
       "timestamp": 1779074815,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 0,
-        "y": 1740,
-        "lane": -5,
-        "radius": 6,
-        "depth": 33,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "3243a22bc414877eeb57d81714318ae02492aadd",
@@ -730,17 +390,7 @@
       "date": "2026-05-11T02:53:11Z",
       "timestamp": 1778467991,
       "subject": "Merge pull request #8 from XAOSTECH:chore/update-submodules-20260511-025243",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1820,
-        "lane": 0,
-        "radius": 10,
-        "depth": 34,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "f0485564b0a6dc010e72605e43d53c692d4b1453",
@@ -751,17 +401,7 @@
       "date": "2026-05-11T02:52:43Z",
       "timestamp": 1778467963,
       "subject": "chore: update 3 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 1320,
-        "y": 1860,
-        "lane": 6,
-        "radius": 6,
-        "depth": 35,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "fc435aa6928f910b1981bf2be01e8471676e0e0c",
@@ -772,17 +412,7 @@
       "date": "2026-05-04T02:39:00Z",
       "timestamp": 1777862340,
       "subject": "Merge pull request #7 from XAOSTECH:chore/update-submodules-20260504-023828",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 1940,
-        "lane": 0,
-        "radius": 10,
-        "depth": 36,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "f1ef712cf0e16acf8034d617da4e4f7bcee84b46",
@@ -793,17 +423,7 @@
       "date": "2026-05-04T02:38:28Z",
       "timestamp": 1777862308,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": -120,
-        "y": 1980,
-        "lane": -6,
-        "radius": 6,
-        "depth": 37,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "f57dd4e62fa6a72a70bd8b33a8140856295f524b",
@@ -814,17 +434,7 @@
       "date": "2026-04-27T02:34:12Z",
       "timestamp": 1777257252,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2060,
-        "lane": 0,
-        "radius": 9,
-        "depth": 38,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "f6baecd12e49e2020a44423c626f44fbe19c5e1f",
@@ -835,17 +445,7 @@
       "date": "2026-04-20T02:29:22Z",
       "timestamp": 1776652162,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2100,
-        "lane": 0,
-        "radius": 6,
-        "depth": 39,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "53e682bd92ea9de548932b0b9b117a9f241481ac",
@@ -856,17 +456,7 @@
       "date": "2026-04-13T02:29:21Z",
       "timestamp": 1776047361,
       "subject": "Merge pull request #6 from XAOSTECH:chore/update-submodules-20260413-022844",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2140,
-        "lane": 0,
-        "radius": 10,
-        "depth": 40,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "b77277f9b1f16dc758321656a023eff16b0ace7e",
@@ -877,17 +467,7 @@
       "date": "2026-04-13T02:29:13Z",
       "timestamp": 1776047353,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2180,
-        "lane": 0,
-        "radius": 6,
-        "depth": 41,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "ff93c14e5ad4e345ef110ff1f5690f9f9b4d699c",
@@ -898,17 +478,7 @@
       "date": "2026-04-13T02:28:44Z",
       "timestamp": 1776047324,
       "subject": "chore: update 1 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 1440,
-        "y": 2220,
-        "lane": 7,
-        "radius": 6,
-        "depth": 42,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "04a6dccc86b3f20dca1fb889d203d4d42c139088",
@@ -919,17 +489,7 @@
       "date": "2026-04-06T02:13:12Z",
       "timestamp": 1775441592,
       "subject": "Merge pull request #5 from XAOSTECH:chore/update-submodules-20260406-021241",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2300,
-        "lane": 0,
-        "radius": 10,
-        "depth": 43,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "1fefa6100208b1f4e30a7b05d220f77b2a71da5e",
@@ -940,17 +500,7 @@
       "date": "2026-04-06T02:13:08Z",
       "timestamp": 1775441588,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2340,
-        "lane": 0,
-        "radius": 6,
-        "depth": 44,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "651e60fd20ff00c9f15163dff1c293d62ed9960a",
@@ -961,101 +511,31 @@
       "date": "2026-04-06T02:12:41Z",
       "timestamp": 1775441561,
       "subject": "chore: update 3 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": -240,
-        "y": 2380,
-        "lane": -7,
-        "radius": 6,
-        "depth": 45,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "7a3b1de96c22991c9bbfc093f9075d3145680161",
       "short": "7a3b1de",
-      "parents": "478cf7a235c837d31a003dd47a355a4844d471c0",
+      "parents": "collapsed:478cf7a235c837d31a003dd47a355a4844d471c0:a45c24b85a6280d2902d2c5acaabc183add1369d",
       "author": "xaos-bot",
       "email": "262248812+xaos-bot@users.noreply.github.com",
       "date": "2026-03-30T02:12:07Z",
       "timestamp": 1774836727,
       "subject": "chore: update git tree visualisation",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2460,
-        "lane": 0,
-        "radius": 9,
-        "depth": 46,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
-      "sha": "478cf7a235c837d31a003dd47a355a4844d471c0",
-      "short": "478cf7a",
-      "parents": "6428e85137932a361847862e17a0df7bac32afb9",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
+      "sha": "collapsed:478cf7a235c837d31a003dd47a355a4844d471c0:a45c24b85a6280d2902d2c5acaabc183add1369d",
+      "short": "3",
+      "parents": "f8e219cf93767962291abb943aaf0e2e90ea3206",
+      "author": "",
+      "email": "",
       "date": "2026-03-23T17:54:52+01:00",
       "timestamp": 1774284892,
-      "subject": "chore(dc-init): load workflows,actions",
+      "subject": "3 commits",
       "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2500,
-        "lane": 0,
-        "radius": 6,
-        "depth": 47,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
-    },
-    {
-      "sha": "6428e85137932a361847862e17a0df7bac32afb9",
-      "short": "6428e85",
-      "parents": "a45c24b85a6280d2902d2c5acaabc183add1369d",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
-      "date": "2026-03-15T06:29:05+01:00",
-      "timestamp": 1773552545,
-      "subject": "chore(dc-init): update workflows,actions",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2540,
-        "lane": 0,
-        "radius": 6,
-        "depth": 48,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
-    },
-    {
-      "sha": "a45c24b85a6280d2902d2c5acaabc183add1369d",
-      "short": "a45c24b",
-      "parents": "f8e219cf93767962291abb943aaf0e2e90ea3206",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
-      "date": "2026-03-15T06:29:02+01:00",
-      "timestamp": 1773552542,
-      "subject": "chore(dc-init): recover interrupted update",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2580,
-        "lane": 0,
-        "radius": 6,
-        "depth": 49,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "collapsed": true,
+      "count": 3
     },
     {
       "sha": "f8e219cf93767962291abb943aaf0e2e90ea3206",
@@ -1066,17 +546,7 @@
       "date": "2026-03-14T20:20:45Z",
       "timestamp": 1773519645,
       "subject": "Merge pull request #4 from XAOSTECH:chore/update-submodules-20260314-202008",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2620,
-        "lane": 0,
-        "radius": 10,
-        "depth": 50,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "eb1cbd571e5951a7fec4ea0c8e165bd97bac0ac5",
@@ -1087,17 +557,7 @@
       "date": "2026-03-14T20:20:08Z",
       "timestamp": 1773519608,
       "subject": "chore: update 5 submodule(s) to latest",
-      "refs": "",
-      "position": {
-        "x": 1560,
-        "y": 2660,
-        "lane": 8,
-        "radius": 6,
-        "depth": 51,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "c0b7b4d43a9df1346ff6e96e0122178916ed3073",
@@ -1108,17 +568,7 @@
       "date": "2026-03-14T21:19:30+01:00",
       "timestamp": 1773519570,
       "subject": "chore(dc-init): update workflows/actions",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 2740,
-        "lane": 0,
-        "radius": 9,
-        "depth": 52,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "ab5b0936a0cafea18cbbcac23f4715464eaf83ea",
@@ -1129,17 +579,7 @@
       "date": "2026-03-14T20:13:47Z",
       "timestamp": 1773519227,
       "subject": "chore: update 5 submodule(s) to latest",
-      "refs": "origin/chore/update-submodules-20260314-201347",
-      "position": {
-        "x": -360,
-        "y": 2780,
-        "lane": -8,
-        "radius": 6,
-        "depth": 53,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": "origin/chore/update-submodules-20260314-201347"
     },
     {
       "sha": "c85fc486d758dbd229fb740253fd204b0a0e4d74",
@@ -1150,17 +590,7 @@
       "date": "2026-03-14T21:13:06+01:00",
       "timestamp": 1773519186,
       "subject": "chore(dc-init): update workflows/actions",
-      "refs": "",
-      "position": {
-        "x": 1680,
-        "y": 2860,
-        "lane": 9,
-        "radius": 6,
-        "depth": 54,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "47c795ede333e1aa77cd6a894e6d0021f0583668",
@@ -1171,17 +601,7 @@
       "date": "2026-03-14T20:10:07Z",
       "timestamp": 1773519007,
       "subject": "chore: update 5 submodule(s) to latest",
-      "refs": "origin/chore/update-submodules-20260314-201007",
-      "position": {
-        "x": -480,
-        "y": 2940,
-        "lane": -9,
-        "radius": 6,
-        "depth": 55,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": "origin/chore/update-submodules-20260314-201007"
     },
     {
       "sha": "6b6243c9955f120068397516f0e80ae15cd09a40",
@@ -1192,17 +612,7 @@
       "date": "2026-03-14T21:09:14+01:00",
       "timestamp": 1773518954,
       "subject": "chore(dc-init): update workflows/actions",
-      "refs": "",
-      "position": {
-        "x": 1800,
-        "y": 3020,
-        "lane": 10,
-        "radius": 6,
-        "depth": 56,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "ac5c738487a1ca26da5cbb10f101f0ae339341c7",
@@ -1213,17 +623,7 @@
       "date": "2026-03-14T18:05:28+01:00",
       "timestamp": 1773507928,
       "subject": "chore(dc-contain) + fix (replace.yml): remove dash",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3100,
-        "lane": 0,
-        "radius": 9,
-        "depth": 57,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "d2bd2ed71d65090876b3d203f80e48c357870caa",
@@ -1234,17 +634,7 @@
       "date": "2026-03-06T02:21:53Z",
       "timestamp": 1772763713,
       "subject": "Merge pull request #3 from XAOSTECH:anglicise/20260306-022118\\n\\nchore: Convert American spellings to British English",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3140,
-        "lane": 0,
-        "radius": 10,
-        "depth": 58,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "b5d5eb60cbd0b0fb3269028cc780c0dd11355b9b",
@@ -1255,17 +645,7 @@
       "date": "2026-03-06T02:21:18Z",
       "timestamp": 1772763678,
       "subject": "chore: convert American spellings to British English",
-      "refs": "",
-      "position": {
-        "x": -600,
-        "y": 3180,
-        "lane": -10,
-        "radius": 6,
-        "depth": 59,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "4928eeb02e2e36859b7495b379044a2141a43370",
@@ -1276,38 +656,7 @@
       "date": "2026-03-06T02:12:56Z",
       "timestamp": 1772763176,
       "subject": "chore: convert American spellings to British English",
-      "refs": "origin/anglicise/20260306-021256",
-      "position": {
-        "x": 1920,
-        "y": 3260,
-        "lane": 11,
-        "radius": 6,
-        "depth": 60,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
-    },
-    {
-      "sha": "4fc3ed297e64116ac72b7563946077e654105924",
-      "short": "4fc3ed2",
-      "parents": "59ba59d1144b244879653d615ea863c53efaaec5",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
-      "date": "2026-03-06T03:05:23+01:00",
-      "timestamp": 1772762723,
-      "subject": "chore: dc-init 2",
-      "refs": "",
-      "position": {
-        "x": -720,
-        "y": 3340,
-        "lane": -11,
-        "radius": 6,
-        "depth": 61,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": "origin/anglicise/20260306-021256"
     },
     {
       "sha": "aac0ca20644697d098dc71a50691f16da6769af8",
@@ -1318,17 +667,18 @@
       "date": "2026-03-06T03:05:23+01:00",
       "timestamp": 1772762723,
       "subject": "chore: dc-init 2",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3420,
-        "lane": 0,
-        "radius": 9,
-        "depth": 62,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
+    },
+    {
+      "sha": "4fc3ed297e64116ac72b7563946077e654105924",
+      "short": "4fc3ed2",
+      "parents": "59ba59d1144b244879653d615ea863c53efaaec5",
+      "author": "xaoscience",
+      "email": "69734795+xaoscience@users.noreply.github.com",
+      "date": "2026-03-06T03:05:23+01:00",
+      "timestamp": 1772762723,
+      "subject": "chore: dc-init 2",
+      "refs": ""
     },
     {
       "sha": "59ba59d1144b244879653d615ea863c53efaaec5",
@@ -1339,17 +689,7 @@
       "date": "2026-03-06T02:55:45+01:00",
       "timestamp": 1772762145,
       "subject": "Update monorepo docs: reflect unlimited crash recovery, fix crash limit references",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3460,
-        "lane": 0,
-        "radius": 9,
-        "depth": 63,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
       "sha": "0acaba1bdf1d8b18e8a702d519a30861705d4062",
@@ -1360,17 +700,7 @@
       "date": "2026-03-01T02:26:22Z",
       "timestamp": 1772331982,
       "subject": "Merge pull request #1 from XAOSTECH:anglicise/20260301-022549\\n\\nchore: Convert American spellings to British English",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3500,
-        "lane": 0,
-        "radius": 10,
-        "depth": 64,
-        "is_trunk": true,
-        "is_merge": true,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "7728aff1a8a81ab19b4f0be71faea7fe00431a39",
@@ -1381,101 +711,31 @@
       "date": "2026-03-01T02:25:49Z",
       "timestamp": 1772331949,
       "subject": "chore: convert American spellings to British English",
-      "refs": "",
-      "position": {
-        "x": 2040,
-        "y": 3540,
-        "lane": 12,
-        "radius": 6,
-        "depth": 65,
-        "is_trunk": false,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     },
     {
       "sha": "be1fc23c82f513f079f67f671f00ec617777030c",
       "short": "be1fc23",
-      "parents": "4bfff0478130adcc95690ecd0a369adb1b0e5854",
+      "parents": "collapsed:4bfff0478130adcc95690ecd0a369adb1b0e5854:ba392deebec6fb8d3c32929e45b91077a9cf28e5",
       "author": "xaoscience",
       "email": "69734795+xaoscience@users.noreply.github.com",
       "date": "2026-02-28T17:43:10+01:00",
       "timestamp": 1772296990,
       "subject": "Update main documentation: integrate all modules with credits",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3620,
-        "lane": 0,
-        "radius": 9,
-        "depth": 66,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": true
-      }
+      "refs": ""
     },
     {
-      "sha": "4bfff0478130adcc95690ecd0a369adb1b0e5854",
-      "short": "4bfff04",
-      "parents": "8999317276fbe2fbc3b4552f3970743e42c8133e",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
+      "sha": "collapsed:4bfff0478130adcc95690ecd0a369adb1b0e5854:ba392deebec6fb8d3c32929e45b91077a9cf28e5",
+      "short": "3",
+      "parents": "4b54122bd47325576e46ddd3191da7707c9b715d",
+      "author": "",
+      "email": "",
       "date": "2026-02-27T01:20:31+01:00",
       "timestamp": 1772151631,
-      "subject": "chore: dc-contain + americanise",
+      "subject": "3 commits",
       "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3660,
-        "lane": 0,
-        "radius": 6,
-        "depth": 67,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
-    },
-    {
-      "sha": "8999317276fbe2fbc3b4552f3970743e42c8133e",
-      "short": "8999317",
-      "parents": "ba392deebec6fb8d3c32929e45b91077a9cf28e5",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
-      "date": "2026-02-24T00:00:36+01:00",
-      "timestamp": 1771887636,
-      "subject": "docs: comprehensive P010 HDR integration README at workspace root",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3700,
-        "lane": 0,
-        "radius": 6,
-        "depth": 68,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
-    },
-    {
-      "sha": "ba392deebec6fb8d3c32929e45b91077a9cf28e5",
-      "short": "ba392de",
-      "parents": "4b54122bd47325576e46ddd3191da7707c9b715d",
-      "author": "xaoscience",
-      "email": "69734795+xaoscience@users.noreply.github.com",
-      "date": "2026-02-23T23:52:25+01:00",
-      "timestamp": 1771887145,
-      "subject": "chore: add P010_for_V4L2 as submodule for Linux HDR kernel support",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3740,
-        "lane": 0,
-        "radius": 6,
-        "depth": 69,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "collapsed": true,
+      "count": 3
     },
     {
       "sha": "4b54122bd47325576e46ddd3191da7707c9b715d",
@@ -1486,17 +746,7 @@
       "date": "2026-02-23T01:13:31+01:00",
       "timestamp": 1771805611,
       "subject": "dc-init",
-      "refs": "",
-      "position": {
-        "x": 600,
-        "y": 3780,
-        "lane": 0,
-        "radius": 6,
-        "depth": 70,
-        "is_trunk": true,
-        "is_merge": false,
-        "is_fork": false
-      }
+      "refs": ""
     }
   ],
   "branches": [
