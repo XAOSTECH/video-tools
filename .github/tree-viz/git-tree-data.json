@@ -3,10 +3,21 @@
     "repository": "video-tools",
     "current_branch": "main",
     "repo_url": "https://github.com/XAOSTECH/video-tools",
-    "generated": "2026-09-07T02:48:07Z",
+    "generated": "2026-09-14T03:17:06Z",
     "max_commits": 500
   },
   "commits": [
+  {
+    "sha": "44926b54a0f619cee7794dd9e5e0635151e97d92",
+    "short": "44926b5",
+    "parents": "dcd2ff73a7199f6316d482eadbfae0fb5980ef30",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-09-14T03:17:06Z",
+    "timestamp": 1789355826,
+    "subject": "chore: update git tree visualisation",
+    "refs": "HEAD -> main, origin/main"
+  },
   {
     "sha": "dcd2ff73a7199f6316d482eadbfae0fb5980ef30",
     "short": "dcd2ff7",
@@ -16,7 +27,7 @@
     "date": "2026-09-07T02:48:07Z",
     "timestamp": 1788749287,
     "subject": "Merge pull request #19 from XAOSTECH:chore/update-submodules-20260907-024732",
-    "refs": "HEAD -> main, origin/main"
+    "refs": ""
   },
   {
     "sha": "67400ec8895a0fc8e7a9a57551aeb23027e6821c",
@@ -812,7 +823,7 @@
   }
 ],
   "branches": [
-  {"name":"dcd2ff73a7199f6316d482eadbfae0fb5980ef30 Merge pull request #19 from XAOSTECH:chore/update-submodules-20260907-024732","sha":"*","current":false,"merged":false}
+  {"name":"44926b54a0f619cee7794dd9e5e0635151e97d92 chore: update git tree visualisation","sha":"*","current":false,"merged":false}
 ],
   "tags": [
 
