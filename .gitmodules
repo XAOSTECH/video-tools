@@ -2,6 +2,14 @@
 	path = copt
 	url = https://github.com/XAOSTECH/copt.git
 
+[submodule "CyberJack"]
+	path = CyberJack
+	url = CyberJack
+
+[submodule "encheck"]
+	path = encheck
+	url = https://github.com/XAOSTECH/encheck.git
+
 [submodule "NG-S4"]
 	path = NG-S4
 	url = https://github.com/XAOSTECH/NG-S4.git
@@ -10,9 +18,12 @@
 	path = op-cap
 	url = https://github.com/XAOSTECH/op-cap.git
 
-[submodule "vidcom"]
-	path = vidcom
-	url = https://github.com/XAOSTECH/vidcom.git
 [submodule "P010_for_V4L2"]
 	path = P010_for_V4L2
 	url = https://github.com/awawa-dev/P010_for_V4L2.git
+
+[submodule "vidcom"]
+	path = vidcom
+	url = https://github.com/XAOSTECH/vidcom.git
+
+
