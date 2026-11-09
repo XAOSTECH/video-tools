@@ -28,13 +28,13 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libsecret-tools \
     nano \
     jq \
-    && sed -i '/en_GB.UTF-8/s/^# //g' /etc/locale.gen \
-    && locale-gen en_GB.UTF-8 \
-    && update-locale LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8 \
+    && sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
 
-ENV LANG=en_GB.UTF-8 \
-    LC_ALL=en_GB.UTF-8 \
+ENV LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8 \
     TZ=UTC \
     EDITOR=nano
 
@@ -45,6 +45,18 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list \
     && apt-get update && apt-get install -y gh \
     && rm -rf /var/lib/apt/lists/*
+
+# Install docker CLI (static binary, no daemon). Required by postCreateCommand to issue `docker exec -u root` calls against the mounted podman socket so it can repair filesystem bits that fuse-overlayfs strips on NTFS-backed graphRoot (setuid on /usr/bin/sudo, ownership of /home/${CATEGORY}). Without this, postCreate cannot elevate privileges because sudo's setuid bit is missing.
+RUN DOCKER_VERSION=$(curl -fsSL https://download.docker.com/linux/static/stable/x86_64/ \
+        | grep -oE 'docker-[0-9]+\.[0-9]+\.[0-9]+\.tgz' | sort -V | tail -1) \
+    && curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" -o /tmp/docker.tgz \
+    && tar -xzf /tmp/docker.tgz -C /tmp \
+    && mv /tmp/docker/docker /usr/local/bin/docker \
+    && chmod 755 /usr/local/bin/docker \
+    && rm -rf /tmp/docker /tmp/docker.tgz
+
+# Suppress "Emulate Docker CLI using podman" advisory message.
+RUN mkdir -p /etc/containers && touch /etc/containers/nodocker
 
 # ============================================================================
 # STREAMING: FFmpeg+NVENC, NGINX-RTMP, SRT, ONNX Runtime GPU, YOLOv8
@@ -86,10 +98,11 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Build SRT from source
-RUN git clone --depth 1 --branch v1.5.4 https://github.com/Haivision/srt.git /tmp/srt \
+RUN SRT_VERSION=$(curl -s https://api.github.com/repos/Haivision/srt/releases/latest | jq -r '.tag_name') \
+    && git clone --depth 1 --branch ${SRT_VERSION} https://github.com/Haivision/srt.git /tmp/srt \
     && cd /tmp/srt && cmake -B build -DCMAKE_INSTALL_PREFIX=/usr/local \
     && cmake --build build -j$(nproc) && cmake --install build \
-    && rm -rf /tmp/srt && ldconfig
+    && cd / && rm -rf /tmp/srt && ldconfig
 
 # Install nv-codec-headers for NVENC/NVDEC
 RUN git clone --depth 1 https://github.com/FFmpeg/nv-codec-headers.git /tmp/nv-codec-headers \
@@ -110,13 +123,14 @@ RUN git clone --depth 1 https://git.ffmpeg.org/ffmpeg.git /tmp/ffmpeg \
     && rm -rf /tmp/ffmpeg && ldconfig
 
 # Build NGINX with RTMP module
-RUN apt-get update && apt-get install -y libpcre3-dev libssl-dev zlib1g-dev \
+RUN apt-get update && apt-get install -y libpcre2-dev libssl-dev zlib1g-dev \
     && rm -rf /var/lib/apt/lists/* \
     && git clone --depth 1 https://github.com/arut/nginx-rtmp-module.git /tmp/nginx-rtmp \
     && curl -fsSL https://nginx.org/keys/nginx_signing.key | gpg --import \
-    && curl -sLO https://nginx.org/download/nginx-1.27.3.tar.gz \
-    && tar -xzf nginx-1.27.3.tar.gz -C /tmp && rm nginx-1.27.3.tar.gz \
-    && cd /tmp/nginx-1.27.3 && ./configure \
+    && NGINX_VERSION=$(curl -s https://nginx.org/en/download.html | grep -oP '(?<=nginx-)[0-9]+\.[0-9]+\.[0-9]+(?=\.tar\.gz)' | sort -V | tail -1) \
+    && curl -sLO https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
+    && tar -xzf nginx-${NGINX_VERSION}.tar.gz -C /tmp && rm nginx-${NGINX_VERSION}.tar.gz \
+    && cd /tmp/nginx-${NGINX_VERSION} && ./configure \
         --prefix=/usr/local/nginx \
         --with-http_ssl_module --with-http_v2_module \
         --with-http_realip_module --with-http_stub_status_module \
@@ -136,6 +150,20 @@ RUN apt-get update && apt-get install -y \
     libavformat-dev libavcodec-dev libavutil-dev libswscale-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Install ONNX Runtime GPU (latest)
+RUN ONNX_VERSION=$(curl -s https://api.github.com/repos/microsoft/onnxruntime/releases/latest | jq -r '.tag_name' | tr -d 'v') \
+    && curl -fsSL "https://github.com/microsoft/onnxruntime/releases/download/v${ONNX_VERSION}/onnxruntime-linux-x64-${ONNX_VERSION}.tgz" -o /tmp/onnxruntime.tgz \
+    && tar -xzf /tmp/onnxruntime.tgz -C /opt \
+    && mv /opt/onnxruntime-linux-x64-${ONNX_VERSION} /opt/onnxruntime \
+    && ln -sf /opt/onnxruntime/include/* /usr/local/include/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime.so* /usr/local/lib/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_cuda.so /usr/local/lib/ \
+    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_shared.so /usr/local/lib/ \
+    && ldconfig && rm -f /tmp/onnxruntime.tgz
+
+ENV ONNXRUNTIME_DIR=/opt/onnxruntime \
+    LD_LIBRARY_PATH=/opt/onnxruntime/lib:${LD_LIBRARY_PATH}
+
 # Install yt-dlp
 RUN YT_DLP_VERSION=$(curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest | jq -r '.tag_name') \
     && curl -fsSL "https://github.com/yt-dlp/yt-dlp/releases/download/${YT_DLP_VERSION}/yt-dlp" -o /usr/local/bin/yt-dlp \
@@ -147,20 +175,6 @@ RUN apt-get update && apt-get install -y \
     libnvinfer-dispatch10 libnvinfer-headers-dev \
     bc sqlite3 \
     && rm -rf /var/lib/apt/lists/*
-
-# Install ONNX Runtime 1.20.1 GPU
-RUN ONNX_VERSION="1.20.1" \
-    && curl -fsSL "https://github.com/microsoft/onnxruntime/releases/download/v${ONNX_VERSION}/onnxruntime-linux-x64-gpu-${ONNX_VERSION}.tgz" -o /tmp/onnxruntime.tgz \
-    && tar -xzf /tmp/onnxruntime.tgz -C /opt \
-    && mv /opt/onnxruntime-linux-x64-gpu-${ONNX_VERSION} /opt/onnxruntime \
-    && ln -sf /opt/onnxruntime/include/* /usr/local/include/ \
-    && ln -sf /opt/onnxruntime/lib/libonnxruntime.so* /usr/local/lib/ \
-    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_cuda.so /usr/local/lib/ \
-    && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_shared.so /usr/local/lib/ \
-    && ldconfig && rm -f /tmp/onnxruntime.tgz
-
-ENV ONNXRUNTIME_DIR=/opt/onnxruntime \
-    LD_LIBRARY_PATH=/opt/onnxruntime/lib:${LD_LIBRARY_PATH}
 
 # Export YOLOv8n to ONNX format
 RUN apt-get update && apt-get install -y --no-install-recommends python3-pip python3-venv \
@@ -212,28 +226,30 @@ RUN if id ubuntu &>/dev/null; then \
     usermod -aG sudo streaming && \
     echo "streaming ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
     mkdir -p /home/streaming/.config /home/streaming/.cache /home/streaming/.local/share && \
-    chown -R streaming:streaming /home/streaming && \
+    touch /home/streaming/.hushlogin /home/streaming/.bashrc && \
     chmod 755 /home/streaming && \
     rm -rf /root/.gnupg /home/streaming/.gnupg
+
+# Configure nvm for user shell and GPG_TTY (run as root with explicit path — avoids UID name resolution instability in rootless podman layer snapshots)
+RUN echo 'export NVM_DIR="/opt/nvm"' >> /home/streaming/.bashrc && \
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> /home/streaming/.bashrc && \
+    echo 'export GPG_TTY=$(tty)' >> /home/streaming/.bashrc
 
 USER streaming
 WORKDIR /home/streaming
 
-RUN touch ~/.hushlogin ~/.bashrc
-
-# Configure nvm for user shell (installed system-wide in common layer)
-# Set GPG_TTY correctly for interactive shells (must be evaluated at runtime, not baked in).
-RUN echo 'export NVM_DIR="/opt/nvm"' >> ~/.bashrc && \
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc && \
-    echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
-
 # Install dev-control system-wide to /opt
 USER root
-RUN mkdir -p /opt/dev-control && \
-    wget -O- https://github.com/XAOSTECH/dev-control/archive/refs/tags/latest.tar.gz | tar -xz --strip-components=1 -C /opt/dev-control && \
-    chmod +x /opt/dev-control/scripts/*.sh /opt/dev-control/lib/*.sh /opt/dev-control/lib/git/*.sh 2>/dev/null || true && \
-    echo 'export PATH=/opt/dev-control/scripts:$PATH' >> /etc/profile.d/dev-control.sh && \
-    chmod 644 /etc/profile.d/dev-control.sh
+RUN mkdir -p /opt/dev-control \
+    && { wget -q --tries=3 --waitretry=3 -O- \
+             https://github.com/XAOSTECH/dev-control/archive/refs/tags/latest.tar.gz \
+         || wget -q --tries=3 --waitretry=3 -O- \
+             https://github.com/XAOSTECH/dev-control/archive/refs/heads/main.tar.gz; } \
+       | tar -xz --strip-components=1 -C /opt/dev-control \
+    && test -f /opt/dev-control/scripts/alias-loading.sh \
+    && { chmod +x /opt/dev-control/scripts/*.sh /opt/dev-control/lib/*.sh /opt/dev-control/lib/git/*.sh 2>/dev/null || true; } \
+    && echo 'export PATH=/opt/dev-control/scripts:$PATH' >> /etc/profile.d/dev-control.sh \
+    && chmod 644 /etc/profile.d/dev-control.sh
 
 # Install nvm and Node.js system-wide (required for npx-dependent MCP servers like firecrawl)
 ENV NVM_DIR=/opt/nvm
@@ -248,12 +264,7 @@ RUN echo 'export NVM_DIR=/opt/nvm && [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DI
 
 ENV PATH=/opt/nvm/versions/node/default/bin:${PATH}
 
-# Pre-create directories with proper permissions before VS Code init runs.
-# VS Code's container setup (pre-postCreateCommand) creates missing dirs as root,
-# which permanently breaks writability for the container user.
-# Pre-creating here with correct ownership prevents that race condition.
-# BUILD_DATE busts this layer's cache on each build so permissions are always applied fresh.
-ARG BUILD_DATE
+# Pre-create directories to ensure proper permissions and avoid root-owned fallback paths
 RUN mkdir -p \
         /home/streaming/.vscode-server \
         /home/streaming/.bash_backups \
@@ -262,15 +273,7 @@ RUN mkdir -p \
         /home/streaming/.cache \
         /home/streaming/.config \
         /home/streaming/.devcontainer && \
-    chown -R streaming:streaming \
-        /home/streaming/.vscode-server \
-        /home/streaming/.bash_backups \
-        /home/streaming/.gnupg \
-        /home/streaming/.ssh \
-        /home/streaming/.cache \
-        /home/streaming/.config \
-        /home/streaming/.devcontainer && \
-    chmod 775 /home/streaming/.vscode-server && \
+    chmod 777 /home/streaming/.vscode-server && \
     chmod 700 /home/streaming/.bash_backups && \
     chmod 700 /home/streaming/.gnupg && \
     chmod 700 /home/streaming/.ssh && \

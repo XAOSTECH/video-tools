@@ -2,7 +2,7 @@
 
 ## Metadata
 - **Category**: `streaming`
-- **Type**: `Build from Dockerfile`
+- **Type**: `Pre-built image`
 - **Container Name**: `CST`
 
 ## Generated Instructions
@@ -28,10 +28,19 @@
 
    `./scripts/containerise.sh --base --streaming --defaults`
 
+5. Generate an image-based devcontainer (example):
+
+   `dc-contain --img --streaming`
+
 ## About
 
-This devcontainer builds from the generated Dockerfile.
-**Image tag:** `devcontrol/streaming:latest`
+This devcontainer uses a pre-built dev-control category image.
+**Base Image:** `devcontrol/streaming:latest`
+
+This folder is generated from a base image. The usual flow is:
+
+- Build the base image in a parent folder
+- Then generate this image-based devcontainer using `--img`
 
 **Features:** FFmpeg (NVENC/NVDEC), NGINX-RTMP, SRT, ONNX Runtime GPU, YOLOv8
 
