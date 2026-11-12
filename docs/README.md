@@ -19,6 +19,12 @@
 
 # XAOSTECH video-tools
 
+<p align="center">
+  <a href="https://github.com/XAOSTECH/CST"><img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-XAOSTECH%2FCST-181717?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/XAOSTECH/CST/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/XAOSTECH/CST?style=for-the-badge&logo=semantic-release&color=blue"></a>
+  <a href="https://github.com/XAOSTECH/CST/blob/main/LICENSE"><img alt="Licence" src="https://img.shields.io/badge/licence-GPL--3.0-green?style=for-the-badge"></a>
+</p>
+
 Professional Linux video capture, streaming, and HDR encoding toolset. Integrate low-cost USB capture devices, build P010 10-bit kernel support, and stream 4K HDR to YouTube with GPU acceleration. Some of these produce shims that conflict with secure boot unless enrolled with a MOK.
 
 ## 🎯 Project Modules
