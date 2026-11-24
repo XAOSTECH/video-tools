@@ -67,24 +67,14 @@ RUN mkdir -p /etc/containers && touch /etc/containers/nodocker
 # SPDX-Licence-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2025-2026 xaoscience
 
-# Install CUDA Toolkit 13.1
-RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb -O /tmp/cuda-keyring.deb \
-    && dpkg -i /tmp/cuda-keyring.deb && rm /tmp/cuda-keyring.deb \
-    && apt-get update && apt-get install -y \
-        cuda-toolkit-13-1 cuda-nvcc-13-1 \
-        cuda-libraries-dev-13-1 cuda-cudart-dev-13-1 \
-    && rm -rf /var/lib/apt/lists/*
+# Install the latest stable CUDA Toolkit from the NVIDIA Ubuntu repo
+RUN bash -lc 'set -e; if [ -f /etc/os-release ]; then . /etc/os-release; fi; VERSION_ID="${VERSION_ID:-26.04}"; CUDA_REPO_URL="https://developer.download.nvidia.com/compute/cuda/repos/ubuntu${VERSION_ID//.}/x86_64/"; CUDA_PACKAGE="$(curl -fsSL "$CUDA_REPO_URL" 2>/dev/null | grep -oE "cuda-toolkit-[0-9]+-[0-9]+" | LC_ALL=C sort -V | tail -n 1 || echo "cuda-toolkit-13-5")"; [ -n "$CUDA_PACKAGE" ]; CUDA_NVCC_PACKAGE="${CUDA_PACKAGE/cuda-toolkit-/cuda-nvcc-}"; CUDA_LIBRARIES_PACKAGE="${CUDA_PACKAGE/cuda-toolkit-/cuda-libraries-dev-}"; CUDA_CUDART_PACKAGE="${CUDA_PACKAGE/cuda-toolkit-/cuda-cudart-dev-}"; curl -fsSL --retry 5 --retry-delay 10 "${CUDA_REPO_URL}cuda-keyring_1.1-1_all.deb" -o /tmp/cuda-keyring.deb; dpkg -i /tmp/cuda-keyring.deb; rm -f /tmp/cuda-keyring.deb; apt-get update; apt-get install -y --no-install-recommends "$CUDA_PACKAGE" "$CUDA_NVCC_PACKAGE" "$CUDA_LIBRARIES_PACKAGE" "$CUDA_CUDART_PACKAGE"; rm -rf /var/lib/apt/lists/*'
 
-# Install CUDA 12.6 runtime libraries for ONNX Runtime 1.20.x compatibility
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        cuda-cudart-12-6 cuda-nvrtc-12-6 \
-        libcublas-12-6 libcufft-12-6 libcurand-12-6 \
-        libcusparse-12-6 libcusolver-12-6 \
-        libnvjitlink-12-6 libcudnn9-cuda-12 \
-    && rm -rf /var/lib/apt/lists/*
+# Install the newest compatible CUDA runtime libraries for the active toolkit release
+RUN bash -lc 'set -e; if [ -f /etc/os-release ]; then . /etc/os-release; fi; VERSION_ID="${VERSION_ID:-26.04}"; CUDA_REPO_URL="https://developer.download.nvidia.com/compute/cuda/repos/ubuntu${VERSION_ID//.}/x86_64/"; CUDA_PACKAGE="$(curl -fsSL "$CUDA_REPO_URL" 2>/dev/null | grep -oE "cuda-toolkit-[0-9]+-[0-9]+" | LC_ALL=C sort -V | tail -n 1 || echo "cuda-toolkit-13-5")"; CUDA_VERSION="${CUDA_PACKAGE/cuda-toolkit-/}"; CUDA_RUNTIME_PACKAGES=(); for pkg in cuda-cudart cuda-nvrtc libcublas libcufft libcurand libcusparse libcusolver libnvjitlink; do CUDA_RUNTIME_PACKAGES+=("${pkg}-${CUDA_VERSION}"); done; CUDA_CUDNN_PACKAGE="libcudnn9-cuda-${CUDA_VERSION%%-*}"; apt-get update; apt-get install -y --no-install-recommends "${CUDA_RUNTIME_PACKAGES[@]}" "$CUDA_CUDNN_PACKAGE"; rm -rf /var/lib/apt/lists/*'
 
 ENV PATH=/usr/local/cuda/bin:${PATH} \
-    LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:/usr/local/cuda/lib64:${LD_LIBRARY_PATH} \
+    LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH} \
     CUDA_HOME=/usr/local/cuda
 
 # Install FFmpeg build dependencies
@@ -122,6 +112,8 @@ RUN git clone --depth 1 https://git.ffmpeg.org/ffmpeg.git /tmp/ffmpeg \
     && make -j$(nproc) && make install \
     && rm -rf /tmp/ffmpeg && ldconfig
 
+ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:${PKG_CONFIG_PATH}
+
 # Build NGINX with RTMP module
 RUN apt-get update && apt-get install -y libpcre2-dev libssl-dev zlib1g-dev \
     && rm -rf /var/lib/apt/lists/* \
@@ -145,21 +137,24 @@ RUN apt-get update && apt-get install -y mediainfo && rm -rf /var/lib/apt/lists/
 RUN apt-get update && apt-get install -y sox libsox-fmt-all && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y v4l-utils && rm -rf /var/lib/apt/lists/*
 
-# Install FFmpeg development headers
-RUN apt-get update && apt-get install -y \
-    libavformat-dev libavcodec-dev libavutil-dev libswscale-dev \
-    && rm -rf /var/lib/apt/lists/*
-
 # Install ONNX Runtime GPU (latest)
-RUN ONNX_VERSION=$(curl -s https://api.github.com/repos/microsoft/onnxruntime/releases/latest | jq -r '.tag_name' | tr -d 'v') \
-    && curl -fsSL "https://github.com/microsoft/onnxruntime/releases/download/v${ONNX_VERSION}/onnxruntime-linux-x64-${ONNX_VERSION}.tgz" -o /tmp/onnxruntime.tgz \
-    && tar -xzf /tmp/onnxruntime.tgz -C /opt \
-    && mv /opt/onnxruntime-linux-x64-${ONNX_VERSION} /opt/onnxruntime \
+RUN NUGET_BASE="https://api.nuget.org/v3-flatcontainer" \
+    && GPU_PKG="microsoft.ml.onnxruntime.gpu.linux" \
+    && BASE_PKG="microsoft.ml.onnxruntime" \
+    && ONNX_VERSION=$(curl -fsSL "${NUGET_BASE}/${GPU_PKG}/index.json" | jq -r '[.versions[] | select(test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))] | last') \
+    && curl -fsSL "${NUGET_BASE}/${GPU_PKG}/${ONNX_VERSION}/${GPU_PKG}.${ONNX_VERSION}.nupkg" -o /tmp/ort-gpu.nupkg \
+    && curl -fsSL "${NUGET_BASE}/${BASE_PKG}/${ONNX_VERSION}/${BASE_PKG}.${ONNX_VERSION}.nupkg" -o /tmp/ort-base.nupkg \
+    && mkdir -p /opt/onnxruntime/include /opt/onnxruntime/lib /tmp/ort-extract \
+    && python3 -c "import zipfile; zipfile.ZipFile('/tmp/ort-gpu.nupkg').extractall('/tmp/ort-extract'); zipfile.ZipFile('/tmp/ort-base.nupkg').extractall('/tmp/ort-extract')" \
+    && mv /tmp/ort-extract/runtimes/linux-x64/native/* /opt/onnxruntime/lib/ \
+    && mv /tmp/ort-extract/build/native/include/* /opt/onnxruntime/include/ \
     && ln -sf /opt/onnxruntime/include/* /usr/local/include/ \
     && ln -sf /opt/onnxruntime/lib/libonnxruntime.so* /usr/local/lib/ \
     && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_cuda.so /usr/local/lib/ \
     && ln -sf /opt/onnxruntime/lib/libonnxruntime_providers_shared.so /usr/local/lib/ \
-    && ldconfig && rm -f /tmp/onnxruntime.tgz
+    && ldconfig \
+    && rm -rf /tmp/ort-gpu.nupkg /tmp/ort-base.nupkg /tmp/ort-extract
+
 
 ENV ONNXRUNTIME_DIR=/opt/onnxruntime \
     LD_LIBRARY_PATH=/opt/onnxruntime/lib:${LD_LIBRARY_PATH}
@@ -170,21 +165,27 @@ RUN YT_DLP_VERSION=$(curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases
     && chmod a+rx /usr/local/bin/yt-dlp
 
 # Install TensorRT
-RUN apt-get update && apt-get install -y \
-    libnvinfer-lean10 libnvinfer-vc-plugin10 \
-    libnvinfer-dispatch10 libnvinfer-headers-dev \
-    bc sqlite3 \
+RUN apt-get update \
+    && TRT_VER=$(apt-cache search --names-only '^libnvinfer[0-9]+$' | sed -E 's/^libnvinfer([0-9]+).*/\1/' | sort -n | tail -n 1) \
+    && apt-get install -y \
+        "libnvinfer-lean${TRT_VER}" \
+        "libnvinfer-vc-plugin${TRT_VER}" \
+        "libnvinfer-dispatch${TRT_VER}" \
+        "libnvinfer${TRT_VER}" \
+        "libnvonnxparsers${TRT_VER}" \
+        libnvinfer-headers-dev \
+        bc sqlite3 \
     && rm -rf /var/lib/apt/lists/*
 
-# Export YOLOv8n to ONNX format
+# Export YOLO26n to ONNX format
 RUN apt-get update && apt-get install -y --no-install-recommends python3-pip python3-venv \
     && python3 -m venv /tmp/yolo-export \
     && /tmp/yolo-export/bin/pip install ultralytics onnx onnxslim onnxruntime \
     && cd /tmp/yolo-export \
-    && /tmp/yolo-export/bin/python -c "from ultralytics import YOLO; model = YOLO('yolov8n.pt'); model.export(format='onnx', imgsz=640, opset=17, simplify=True)" \
+    && /tmp/yolo-export/bin/python -c "from ultralytics import YOLO; model = YOLO('yolo26n.pt'); model.export(format='onnx', imgsz=640, opset=17, simplify=True)" \
     && mkdir -p /opt/models \
-    && mv /tmp/yolo-export/yolov8n.onnx /opt/models/yolov8n.onnx \
-    && chmod 644 /opt/models/yolov8n.* \
+    && mv /tmp/yolo-export/yolo26n.onnx /opt/models/yolo26n.onnx \
+    && chmod 644 /opt/models/yolo26n.* \
     && rm -rf /tmp/yolo-export ~/.config/Ultralytics /tmp/Ultralytics \
     && apt-get purge -y python3-pip python3-venv \
     && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
